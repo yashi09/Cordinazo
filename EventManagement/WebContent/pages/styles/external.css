@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+/* 	-webkit-transform: scale(1.009);
+	-moz-transform: scale(1.009);
+	-ms-transform: scale(1.009);
+	-o-transform: scale(1.009);
+	transform: scale(1.009);   */  
+.add-festival{
+	height: 25px;
+}
+.home-list{
+	background-size: cover;
+	border-color: black;
+	border-width: thin;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.30);
+	color: white;
+	opacity: 0.95;
+}
+
+.home-list:HOVER{    
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.60);
+	opacity: 1.0;
+	transition: all 100ms ease-in-out;
+
+}
+.banner{
+	background-size: cover;
+	color: white;
+	padding-left: 5%;
+	padding-bottom: 10%;
+}
+.secondary-button{
+    color: #373a3c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.secondary-button:HOVER{
+	border-color: #7f7f7f;
+	background-color: #ccc;
+}
+.add-festival>span{
+	color: black;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.ext-date{
+	max-width: 48%;
+}

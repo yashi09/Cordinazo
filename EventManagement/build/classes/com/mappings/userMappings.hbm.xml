@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.pojo.UserDetailsDto" table="COLLEGE_USER">
+		<id name="userId" type="int" length="6">
+			<column name="user_id"></column>
+			<generator class="sequence">
+				<param name="sequence">user_seq</param>
+			</generator>
+		</id>
+		<property name="firstName" type="string" column="first_name" length="30"></property>
+		<property name="lastName" type="string" column="last_name" length="30"></property>
+		<property name="email" type="string" column="email" length="50"></property>
+		<property name="role" type="int" column="role" length="1"></property>
+		<property name="phoneNo" type="long" column="phone" length="10"></property>
+		<!-- <one-to-one name="loginDetailsDto" class="com.pojo.LoginDetailsDto" fetch="select"  lazy="false" cascade="delete"></one-to-one> --> 		
+		<!-- <set name="events" table="EVENT_USERS" cascade="save-update" fetch="select" lazy="false">
+			<key>
+				<column name="user_id"></column>
+			</key>
+			<many-to-many entity-name="com.pojo.EventDetailsDto">
+				<column name="event_id" not-null="false"></column>
+			</many-to-many>
+		</set> -->
+ 		<join table="USER_LOGIN" inverse="true" fetch="select">
+ 			<key>
+ 				<column name="user_id"></column>
+ 			</key>
+ 			<many-to-one name="loginDetailsDto" column="email" unique="true" cascade="delete" lazy="false"></many-to-one>
+ 		</join>
+	</class>
+	<class name="com.pojo.LoginDetailsDto" table="COLLEGE_LOGIN">
+		<id name="email" type="string" length="40">
+			<column name="email"></column>
+		</id>
+		<property name="pwd" type="string" length="30" column="password"></property>
+<!-- 		<one-to-one name="userDetailsDto" class="com.pojo.UserDetailsDto" fetch="select" lazy="false" cascade="delete"></one-to-one>-->		
+		<join table="USER_LOGIN" inverse="false" fetch="select">
+			<key>
+				<column name="email"></column>
+			</key>
+			<many-to-one name="userDetailsDto" column="user_id" unique="true" cascade="save-update" lazy="false"></many-to-one>
+		</join>
+	</class>
+</hibernate-mapping>

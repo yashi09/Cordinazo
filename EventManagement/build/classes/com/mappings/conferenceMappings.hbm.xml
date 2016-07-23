@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.pojo.ConferencePaperMappingClass" table="CONFERENCE_PAPERS">
+	<composite-id>
+		<key-property name="conferenceId" column="conference_id" type="int" length="6"></key-property>
+		<key-property name="paperId" column="paper_id" type="int" length="6"></key-property>
+	</composite-id>
+</class>
+<class name="com.pojo.PaperAuthorMappingClass" table="PAPER_AUTHORS">
+	<composite-id>
+		<key-property name="paperId" column="paper_id" type="int" length="6"></key-property>
+		<key-property name="authorId" column="author_id" type="int" length="6"></key-property>
+	</composite-id>
+</class>
+<class name="com.pojo.PaperDetailsDto" table="PAPER_DETAILS">
+		<id name="paperId" type="int" length="6">
+			<column name="paper_id"></column>
+			<generator class="sequence">
+				<param name="sequence">paper_seq</param>
+			</generator>
+		</id>
+		<property name="conferenceId" column="conference_id" type="int" length="6"></property>
+		<set name="authors" table="AUTHOR_DETAILS" fetch="select" lazy="false">
+			<key>
+				<column name="paper_id"></column>
+			</key>
+			<one-to-many class="com.pojo.AuthorDetailsDto"/>
+		</set>
+		<property name="title" column="title"></property>
+		<property name="abstractOfPaper" column="abstract" type="string"></property>
+		<property name="paperStatus" column="paper_status" type="int"></property>
+	</class>
+	<class name="com.pojo.AuthorDetailsDto" table="AUTHOR_DETAILS">
+		<id name="authorId" type="int" length="6">
+			<column name="author_id"></column>
+			<generator class="sequence">
+				<param name="sequence">author_seq</param>
+			</generator>
+		</id>
+		<property name="firstName" column="f_name" type="string" length="40"></property>
+		<property name="lastName" column="l_name" type="string" length="40"></property>
+		<property name="email" column="email" type="string" length="80"></property>
+		<property name="paperId" column="paper_id" type="int" length="6"></property>
+		<property name="organization" column="organization" type="string" length="100"></property>
+		<property name="conferenceId" column="conference_id" type="int" length="6"></property>
+	</class>
+</hibernate-mapping>

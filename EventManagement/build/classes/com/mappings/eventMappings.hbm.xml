@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.pojo.EventDetailsDto" table="COLLEGE_EVENT">
+		<id name="eventId" type="int" length="6">
+			<column name="event_id"></column>
+			<generator class="sequence">
+				<param name="sequence">event_seq</param>
+			</generator>
+		</id>
+		<many-to-one name="eventTypeDetails" class="com.pojo.TypeDetailsDto" lazy="false">
+			<column name="event_type_id"></column>
+		</many-to-one>
+		<property name="eventName" type="string" length="60" column="event_name"></property>
+		<property name="eventDescription" type="string" length="5000"
+			column="event_desc"></property>
+		<property name="startDate" type="date" column="start_date"></property>
+		<property name="endDate" type="date" column="end_date"></property>
+		<property name="venue" type="string" column="venue"></property>
+		<many-to-one name="scopeDto" class="com.pojo.ScopeDetailsDto" lazy="false">
+			<column name="event_scope_id"></column>
+		</many-to-one>
+		<set name="eventUsers" table="EVENT_USERS" fetch="select" lazy="false">
+			<key>
+				<column name="event_id"></column>
+			</key>
+			<many-to-many class="com.pojo.UserDetailsDto">
+				<column name="user_id" not-null="false"></column>
+			</many-to-many>
+		</set>
+		<property name="firstPrize" type="string" length="70" column="first_prize"></property>
+		<property name="secondPrize" type="string" length="70" column="second_prize"></property>
+		<property name="thirdPrize" type="string" length="70" column="third_prize"></property>
+		<many-to-one name="fest" class="com.pojo.FestDetailsDto" fetch="select" not-null="false">
+			<column name="fest_id" length="6"></column>
+		</many-to-one>
+		<set name="eventVolunteers" table="EVENT_VOLUNTEERS" fetch="select" lazy="false">
+			<key>
+				<column name="event_id"></column>
+			</key>
+			<many-to-many class="com.pojo.UserDetailsDto">
+				<column name="user_id" not-null="true"></column>
+			</many-to-many>
+		</set>
+		<set name="eventParticipants" table="EVENT_PARTICIPANT" fetch="select" lazy="false">
+			<key>
+				<column name="event_id"></column>
+			</key>
+			<many-to-many class="com.pojo.UserDetailsDto">
+				<column name="user_id" not-null="true"></column>
+			</many-to-many>
+		</set>
+		<joined-subclass name="com.pojo.ConferenceDetailsDto" table="CONFERENCE_DETAILS" lazy="true">
+			<key>
+				<column name="conference_id"></column>
+			</key>
+			<property name="submissionStart" type="date" column="submission_start"></property>
+			<property name="submissionEnd" type="date" column="submission_end"></property>
+			<property name="acceptanceDate" type="date" column="acceptance"></property>
+			<property name="registrationDate" type="date" column="registration"></property>
+			<property name="acronym" type="string" column="acronym"></property>
+			<property name="refEmail" type="string" column="ref_email"></property>
+			<set name="conferenceTopics" table="CONFERENCE_TOPICS" fetch="select" lazy="false">
+				<key>
+					<column name="conference_id" unique="false"></column>
+				</key>
+				<element column="topic" type="string" length="100"></element>
+			</set>
+			<set name="conferencePapers" table="PAPER_DETAILS" fetch="select" lazy="false">
+				<key>
+					<column name="conference_id"></column>
+				</key>
+				<one-to-many class="com.pojo.PaperDetailsDto"/>
+			</set>
+		</joined-subclass>
+	</class>
+	<class name="com.pojo.TypeDetailsDto" table="EVENT_TYPE">
+		<id name="eventTypeId" type="int" length="6">
+			<column name="type_id"></column>
+		</id>
+		<property name="eventType" type="string" column="event_type"
+			length="40"></property>
+		<!-- <set name="eventDetailsDtos" table="COLLEGE_EVENT" inverse="true"
+			cascade="all" fetch="join">
+			<key>
+				<column name="event_id"></column>
+			</key>
+			<one-to-many class="com.pojo.EventDetailsDto" />
+		</set> -->
+	</class>
+	<class name="com.pojo.ScopeDetailsDto" table="EVENT_SCOPE">
+		<id name="scopeId" type="int" length="6">
+			<column name="scope_id"></column>
+		</id>
+		<property name="scope" type="string" length="40" column="scope"></property>
+		<!-- <set name="eventDetailsDtos" fetch="join" inverse="true"
+			table="COLLEGE_EVENT" cascade="all">
+			<key>
+				<column name="event_id"></column>
+			</key>
+			<one-to-many class="com.pojo.EventDetailsDto" />
+		</set> -->
+	</class>
+	<class name="com.pojo.EventUserMappingClass" table="EVENT_USERS">
+		<composite-id>
+			<key-property name="userId" column="user_id" type="int" length="6"></key-property>
+			<key-property name="eventId" column="event_id" type="int" length="6"></key-property>
+		</composite-id>
+	</class>
+	<class name="com.pojo.EventVolunteerMappingClass" table="EVENT_VOLUNTEERS">
+		<composite-id>
+			<key-property name="userId" column="user_id" type="int" length="6"></key-property>
+			<key-property name="eventId" column="event_id" type="int" length="6"></key-property>
+		</composite-id>
+	</class>
+	<class name="com.pojo.EventParticipantMappingClass" table="EVENT_PARTICIPANT">
+		<composite-id>
+			<key-property name="userId" column="user_id" type="int" length="6"></key-property>
+			<key-property name="eventId" column="event_id" type="int" length="6"></key-property>
+		</composite-id>
+	</class>
+</hibernate-mapping>

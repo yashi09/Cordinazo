@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.pojo.FestDetailsDto" table="college_fest">
+		<id name="festId" length="6" type="int">
+			<column name="fest_id"></column>
+			<generator class="sequence">
+				<param name="sequence">fest_seq</param>
+			</generator>
+		</id>
+		<many-to-one name="typeDto" class="com.pojo.TypeDetailsDto"
+			lazy="false">
+			<column name="fest_type_id" length="6"></column>
+		</many-to-one>
+		<property name="festName" column="fest_name" length="60"
+			type="string"></property>
+		<property name="festDescription" column="fest_desc" length="1000"
+			type="string"></property>
+		<property name="startDate" column="start_date" type="date"></property>
+		<property name="endDate" column="end_date" type="date"></property>
+		<property name="venue" column="venue" type="string" length="60"></property>
+		<many-to-one name="scopeDto" class="com.pojo.ScopeDetailsDto"
+			lazy="false" fetch="select">
+			<column name="fest_scope_id"></column>
+		</many-to-one>
+		<set name="events" table="college_event" fetch="select" lazy="false">
+			<key>
+				<column name="fest_id"></column>
+			</key>
+			<one-to-many class="com.pojo.EventDetailsDto"/>
+		</set>
+	</class>
+	<class name="com.pojo.FestEventMappingClass" table="fest_event">
+		<composite-id>
+			<key-property name="festId" column="fest_id" length="6"
+				type="int"></key-property>
+			<key-property name="eventId" column="event_id" length="6"
+				type="int"></key-property>
+		</composite-id>
+	</class>
+
+</hibernate-mapping>
