@@ -49,12 +49,21 @@
 					<h:dataTable styleClass="table table-striped"
 						value="#{adminCoordsOfEventPage.eventCoords}" var="coord">
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Name"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{coord.firstName} #{coord.lastName}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Email"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{coord.email}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Contact"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{coord.phoneNo}"></h:outputText>
 						</h:column>
 						<h:column>

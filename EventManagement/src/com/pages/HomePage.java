@@ -3,28 +3,21 @@ package com.pages;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.faces.context.FacesContext;
-import javax.servlet.http.HttpSession;
-
-import org.hibernate.Session;
-
 import com.manager.UserManager;
-import com.pojo.LoginDetailsDto;
-import com.pojo.UserDetailsDto;
 
 public class HomePage extends BasePage{
 	private UserManager userManager;
 	private int eventTypeId;
 	
 	@Override
-	public void preProcess(Map map) {
+	public void preProcess(Map<String,Object> map) {
 		System.out.println("inside preProcess in homePage.");
 	}
 	
 	@Override
-	public Map postProcess() {
+	public Map<String,Object> postProcess() {
 		System.out.println("inside postProcess in homePage. eventTypeId = "+eventTypeId);
-		Map map = new HashMap();
+		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("eventTypeId", eventTypeId);
 		return map;
 	}

@@ -177,7 +177,7 @@
 			<value>#{festManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>editEventPage</managed-bean-name>
 		<managed-bean-class>com.pages.EditEventPage</managed-bean-class>
@@ -187,7 +187,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>coordinatorPage</managed-bean-name>
 		<managed-bean-class>com.pages.CoordinatorPage</managed-bean-class>
@@ -197,7 +197,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>viewCoordsOfEvent</managed-bean-name>
 		<managed-bean-class>com.pages.ViewCoordsOfEvent</managed-bean-class>
@@ -207,7 +207,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>volunteersOfEvent</managed-bean-name>
 		<managed-bean-class>com.pages.VolunteersOfEvent</managed-bean-class>
@@ -217,7 +217,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>participantsOfEvent</managed-bean-name>
 		<managed-bean-class>com.pages.ParticipantsOfEvent</managed-bean-class>
@@ -227,7 +227,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>conferencePage</managed-bean-name>
 		<managed-bean-class>com.pages.ConferencePage</managed-bean-class>
@@ -237,7 +237,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>conferenceDetails</managed-bean-name>
 		<managed-bean-class>com.pages.ConferenceDetails</managed-bean-class>
@@ -247,7 +247,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>adminConferencePage</managed-bean-name>
 		<managed-bean-class>com.pages.AdminConferencePage</managed-bean-class>
@@ -257,7 +257,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>addConference</managed-bean-name>
 		<managed-bean-class>com.pages.AddConferencePage</managed-bean-class>
@@ -271,7 +271,7 @@
 			<value>#{userManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>editConferencePage</managed-bean-name>
 		<managed-bean-class>com.pages.EditConferencePage</managed-bean-class>
@@ -281,7 +281,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>adminConfResearchAreas</managed-bean-name>
 		<managed-bean-class>com.pages.AdminConfResearchAreas</managed-bean-class>
@@ -291,7 +291,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>submitPaper</managed-bean-name>
 		<managed-bean-class>com.pages.SubmitPaper</managed-bean-class>
@@ -301,7 +301,7 @@
 			<value>#{eventManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
 	<managed-bean>
 		<managed-bean-name>mySubmissions</managed-bean-name>
 		<managed-bean-class>com.pages.MySubmissions</managed-bean-class>
@@ -319,7 +319,310 @@
 			<value>#{conferenceManager}</value>
 		</managed-property>
 	</managed-bean>
-	
+
+	<managed-bean>
+		<managed-bean-name>adminPapersOfConf</managed-bean-name>
+		<managed-bean-class>com.pages.AdminPapersOfConf</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>confManager</property-name>
+			<value>#{conferenceManager}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{eventManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>workshopPage</managed-bean-name>
+		<managed-bean-class>com.pages.WorkshopPage</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{workshopManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>adminWorkshopPage</managed-bean-name>
+		<managed-bean-class>com.pages.AdminWorkshopPage</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{workshopManager}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>eventManager</property-name>
+			<value>#{eventManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>addWorkshopPage</managed-bean-name>
+		<managed-bean-class>com.pages.AddWorkshopPage</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>workshopManager</property-name>
+			<value>#{workshopManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>editWorkshopPage</managed-bean-name>
+		<managed-bean-class>com.pages.EditWorkshopPage</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{workshopManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>workshopDetailsPage</managed-bean-name>
+		<managed-bean-class>com.pages.WorkshopDetailsPage</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>workshopManager</property-name>
+			<value>#{workshopManager}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{eventManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>adminGuestLecture</managed-bean-name>
+		<managed-bean-class>com.pages.AdminGuestLecture</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>eventManager</property-name>
+			<value>#{eventManager}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{guestLectureManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>addGuestLecture</managed-bean-name>
+		<managed-bean-class>com.pages.AddGuestLecture</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{guestLectureManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>editGuestLecture</managed-bean-name>
+		<managed-bean-class>com.pages.EditGuestLecture</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{guestLectureManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>guestLecturePage</managed-bean-name>
+		<managed-bean-class>com.pages.GuestLecturePage</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{guestLectureManager}</value>
+		</managed-property>
+		<managed-property>
+			<property-name>eventManager</property-name>
+			<value>#{eventManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>guestLecturesHome</managed-bean-name>
+		<managed-bean-class>com.pages.GuestLecturesHome</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>manager</property-name>
+			<value>#{guestLectureManager}</value>
+		</managed-property>
+	</managed-bean>
+
+
+	<navigation-rule>
+		<from-view-id>/pages/GuestLecturesHome.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>guestLecturePage</from-outcome>
+			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>homePage</from-outcome>
+			<to-view-id>/pages/HomePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>festPage</from-outcome>
+			<to-view-id>/pages/FestPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>conferencePage</from-outcome>
+			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>workshopPage</from-outcome>
+			<to-view-id>/pages/WorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminPage</from-outcome>
+			<to-view-id>/pages/Admin.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>loginPage</from-outcome>
+			<to-view-id>/pages/LoginPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>coordinatorPage</from-outcome>
+			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/EditGuestLecture.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>adminGuestLecture</from-outcome>
+			<to-view-id>/pages/AdminGuestLecture.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>coordinatorPage</from-outcome>
+			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/AddGuestLecture.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>adminGuestLecture</from-outcome>
+			<to-view-id>/pages/AdminGuestLecture.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/AdminGuestLecture.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>addGuestLecture</from-outcome>
+			<to-view-id>/pages/AddGuestLecture.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminGuestLecture</from-outcome>
+			<to-view-id>/pages/AdminGuestLecture.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminCoordsOfEventPage</from-outcome>
+			<to-view-id>/pages/AdminCoordsOfEventPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>editGuestLecture</from-outcome>
+			<to-view-id>/pages/EditGuestLecture.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>homePage</from-outcome>
+			<to-view-id>/pages/HomePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>festPage</from-outcome>
+			<to-view-id>/pages/FestPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>conferencePage</from-outcome>
+			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>workshopPage</from-outcome>
+			<to-view-id>/pages/WorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminPage</from-outcome>
+			<to-view-id>/pages/Admin.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>loginPage</from-outcome>
+			<to-view-id>/pages/LoginPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/EditWorkshopPage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>adminWorkshopPage</from-outcome>
+			<to-view-id>/pages/AdminWorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>coordinatorPage</from-outcome>
+			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/AddWorkshopPage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>adminWorkshopPage</from-outcome>
+			<to-view-id>/pages/AdminWorkshopPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/AdminWorkshopPage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>addWorkshopPage</from-outcome>
+			<to-view-id>/pages/AddWorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminCoordsOfEventPage</from-outcome>
+			<to-view-id>/pages/AdminCoordsOfEventPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>editWorkshopPage</from-outcome>
+			<to-view-id>/pages/EditWorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>homePage</from-outcome>
+			<to-view-id>/pages/HomePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>festPage</from-outcome>
+			<to-view-id>/pages/FestPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>conferencePage</from-outcome>
+			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>workshopPage</from-outcome>
+			<to-view-id>/pages/WorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminPage</from-outcome>
+			<to-view-id>/pages/Admin.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>loginPage</from-outcome>
+			<to-view-id>/pages/LoginPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
 	<navigation-rule>
 		<from-view-id>/pages/SubmitPaper.jsp</from-view-id>
 		<navigation-case>
@@ -327,7 +630,7 @@
 			<to-view-id>/pages/ConferenceDetails.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/ConferenceDetails.jsp</from-view-id>
 		<navigation-case>
@@ -338,41 +641,17 @@
 			<from-outcome>mySubmissions</from-outcome>
 			<to-view-id>/pages/MySubmissions.jsp</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>coordinatorPage</from-outcome>
+			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
+		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/AdminConfResearchAreas.jsp</from-view-id>
 		<navigation-case>
 			<from-outcome>adminConfResearchAreas</from-outcome>
 			<to-view-id>/pages/AdminConfResearchAreas.jsp</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	
-	<navigation-rule>
-		<from-view-id>/pages/EditConferencePage.jsp</from-view-id>
-		<navigation-case>
-			<from-outcome>adminConferencePage</from-outcome>
-			<to-view-id>/pages/AdminConferencePage.jsp</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	
-	<navigation-rule>
-		<from-view-id>/pages/AddConferencePage.jsp</from-view-id>
-		<navigation-case>
-			<from-outcome>adminConferencePage</from-outcome>
-			<to-view-id>/pages/AdminConferencePage.jsp</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-outcome>loginPage</from-outcome>
-			<to-view-id>/pages/LoginPage.jsp</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	
-	<navigation-rule>
-		<from-view-id>/pages/AdminConferencePage.jsp</from-view-id>
-		<navigation-case>
-			<from-outcome>addConference</from-outcome>
-			<to-view-id>/pages/AddConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>loginPage</from-outcome>
@@ -391,8 +670,68 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>workshopPage</from-outcome>
+			<to-view-id>/pages/WorkshopPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/EditConferencePage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>adminConferencePage</from-outcome>
+			<to-view-id>/pages/AdminConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>coordinatorPage</from-outcome>
+			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/AddConferencePage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>adminConferencePage</from-outcome>
+			<to-view-id>/pages/AdminConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>loginPage</from-outcome>
+			<to-view-id>/pages/LoginPage.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/pages/AdminConferencePage.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>addConference</from-outcome>
+			<to-view-id>/pages/AddConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminPapersOfConf</from-outcome>
+			<to-view-id>/pages/AdminPapersOfConf.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>loginPage</from-outcome>
+			<to-view-id>/pages/LoginPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>homePage</from-outcome>
+			<to-view-id>/pages/HomePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>festPage</from-outcome>
+			<to-view-id>/pages/FestPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>conferencePage</from-outcome>
+			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -411,10 +750,10 @@
 			<to-view-id>/pages/AdminConfResearchAreas.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/ConferencePage.jsp</from-view-id>
-			<navigation-case>
+		<navigation-case>
 			<from-outcome>homePage</from-outcome>
 			<to-view-id>/pages/HomePage.jsp</to-view-id>
 		</navigation-case>
@@ -431,8 +770,8 @@
 			<to-view-id>/pages/ConferenceDetails.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -455,7 +794,7 @@
 			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/CoordinatorPage.jsp</from-view-id>
 		<navigation-case>
@@ -491,15 +830,15 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
 			<to-view-id>/pages/WorkshopPage.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/EditEventPage.jsp</from-view-id>
 		<navigation-case>
@@ -519,7 +858,7 @@
 			<to-view-id>/pages/EditEventPage.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/EditFestPage.jsp</from-view-id>
 		<navigation-case>
@@ -559,8 +898,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -603,8 +942,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -691,8 +1030,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureHome</from-outcome>
+			<to-view-id>/pages/GuestLectureHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -719,8 +1058,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -747,16 +1086,28 @@
 			<to-view-id>/pages/HomePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
+			<from-outcome>adminWorkshopPage</from-outcome>
+			<to-view-id>/pages/AdminWorkshopPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>adminGuestLecture</from-outcome>
+			<to-view-id>/pages/AdminGuestLecture.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
 			<from-outcome>festPage</from-outcome>
 			<to-view-id>/pages/FestPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>addWorkshopPage</from-outcome>
+			<to-view-id>/pages/AddWorkshopPage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>conferencePage</from-outcome>
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLectureshome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -795,8 +1146,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -843,8 +1194,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -861,6 +1212,10 @@
 		<navigation-case>
 			<from-outcome>coordinatorPage</from-outcome>
 			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>workshopDetailsPage</from-outcome>
+			<to-view-id>/pages/WorkshopDetailsPage.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
@@ -915,8 +1270,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -939,7 +1294,7 @@
 			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/pages/EventOfFestPage</from-view-id>
 		<navigation-case>
@@ -959,8 +1314,8 @@
 			<to-view-id>/pages/ConferencePage.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>guestLecturePage</from-outcome>
-			<to-view-id>/pages/GuestLecturePage.jsp</to-view-id>
+			<from-outcome>guestLecturesHome</from-outcome>
+			<to-view-id>/pages/GuestLecturesHome.jsp</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>workshopPage</from-outcome>
@@ -969,13 +1324,13 @@
 		<navigation-case>
 			<from-outcome>festDetails</from-outcome>
 			<to-view-id>/pages/FestDetails.jsp</to-view-id>
-		</navigation-case>		
+		</navigation-case>
 		<navigation-case>
 			<from-outcome>coordinatorPage</from-outcome>
 			<to-view-id>/pages/CoordinatorPage.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
+
 	<lifecycle>
 		<phase-listener>com.event.listeners.AppListener</phase-listener>
 	</lifecycle>

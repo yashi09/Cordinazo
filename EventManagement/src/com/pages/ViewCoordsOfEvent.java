@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.manager.EventManager;
-import com.manager.UserManager;
 import com.pojo.EventDetailsDto;
 import com.pojo.UserDetailsDto;
 

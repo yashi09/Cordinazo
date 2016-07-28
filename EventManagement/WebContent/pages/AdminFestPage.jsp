@@ -36,21 +36,33 @@
 				<h:dataTable styleClass="table table-striped"
 					value="#{adminFestPage.fests}" var="fest">
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Name"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{fest.festName}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Description"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{fest.festDescription}"></h:outputText>
 						</h:column>
 						<h:column>
-							<h:outputText value="#{fest.startDate}"></h:outputText>
+							<f:facet name="header">
+								<h:outputText value="Duration"></h:outputText>
+							</f:facet>
+							<h:outputText value="#{fest.startDate} to #{fest.endDate}"></h:outputText>
 						</h:column>
 						<h:column>
-							<h:outputText value="#{fest.endDate}"></h:outputText>
-						</h:column>
-						<h:column>
+						<f:facet name="header">
+								<h:outputText value="scope"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{fest.scopeDto.scope}"></h:outputText>
 						</h:column>
 						<h:column>
+						<f:facet name="header">
+								<h:outputText value="type"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{fest.typeDto.eventType}"></h:outputText>
 						</h:column>
 						<h:column>

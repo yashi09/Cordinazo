@@ -2,10 +2,11 @@ package com.pages;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
-import javax.faces.model.SelectItem;
+import java.util.Set;
 
 import com.manager.EventManager;
 import com.pojo.ConferenceDetailsDto;
@@ -23,7 +24,7 @@ public class AdminConfResearchAreas extends BasePage{
 		conference = manager.getConference(conferenceId);
 		getContext().put("conferenceDto", conference);
 		topics = new ArrayList<String>(conference.getConferenceTopics());
-		
+
 	}
 
 	@Override
@@ -38,7 +39,15 @@ public class AdminConfResearchAreas extends BasePage{
 				conference.getConferenceTopics().add(topic);
 				manager.updateConference(conference);
 			} else if(work.equals("delTopic")){
-				conference.getConferenceTopics().remove(topic);
+				Set<String> topics = conference.getConferenceTopics();
+				Set<String> newTopics = new HashSet<String>();
+				Iterator<String> i =topics.iterator();
+				while(i.hasNext()){
+					String t = i.next();
+					if(!(t.equals(topic)))
+						newTopics.add(t);
+				}
+				conference.setConferenceTopics(newTopics);
 				manager.updateConference(conference);
 			}
 		}

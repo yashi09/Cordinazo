@@ -73,7 +73,7 @@
 								<h:outputText value="Duration"></h:outputText>
 							</f:facet>
 							<h:outputText
-								value="#{conference.startDate}"></h:outputText>
+								value="#{conference.startDate} to #{conference.endDate}"></h:outputText>
 						</h:column>
 						<h:column>
 							<f:facet name="header">
@@ -93,7 +93,7 @@
 							<h:commandLink action="#{adminConferencePage.navNext}"
 								value="papers">
 								<f:setPropertyActionListener value="viewPapers" target="#{adminConferencePage.work}" />
-								<f:setPropertyActionListener value="papersOfConference" target="#{adminConferencePage.action}"/>
+								<f:setPropertyActionListener value="adminPapersOfConf" target="#{adminConferencePage.action}"/>
 								<f:setPropertyActionListener value="#{conference.eventId}" target="#{adminConferencePage.conferenceId}"/>
 							</h:commandLink>
 						</h:column>

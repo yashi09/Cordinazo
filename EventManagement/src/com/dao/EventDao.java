@@ -40,4 +40,6 @@ public interface EventDao {
 	public void deleteParticipantOfEvent(EventParticipantMappingClass eventParticipant);
 	public void deleteAllUsersOfEvent(int eventId);
 	public void updateConference(ConferenceDetailsDto conference);
+	public void deleteAllParticipantsOfEvent(int eventId);
+	public void deleteAllVolunteersOfEvent(int eventId);
 }

@@ -47,7 +47,7 @@ public abstract class BasePage {
 	public void setCurrentPage(String currentPage) {
 		this.currentPage = currentPage;
 	}
-	protected static Map<String, Object> getContext(){
+	public static Map<String, Object> getContext(){
 		return BasePage.context;
 	}
 }

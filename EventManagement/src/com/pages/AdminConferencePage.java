@@ -12,6 +12,7 @@ public class AdminConferencePage extends BasePage{
 	private List<ConferenceDetailsDto> conferences;
 	private String work;
 	private int conferenceId;
+	
 	@Override
 	public void preProcess(Map<String, Object> map) {
 		System.out.println("inside preProcess in AdminConferencePage");

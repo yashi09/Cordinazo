@@ -76,6 +76,19 @@
 				<one-to-many class="com.pojo.PaperDetailsDto"/>
 			</set>
 		</joined-subclass>
+		<joined-subclass name="com.pojo.WorkshopDetailsDto" table="WORKSHOP_DETAILS" lazy="true">
+			<key>
+				<column name="workshop_id"></column>
+			</key>
+			<property name="fees" type="int" length="4"></property>
+		</joined-subclass>
+		<joined-subclass name="com.pojo.GuestLectureDetailsDto" table="guest_lectures" lazy="true">
+			<key>
+				<column name="gl_id"></column>
+			</key>
+			<property name="guestLectureId" column="gl_id" type="int" length="6" insert="false" update="false"></property>
+			<property name="time" column="lecture_time" type="string" length="20"></property>
+		</joined-subclass>
 	</class>
 	<class name="com.pojo.TypeDetailsDto" table="EVENT_TYPE">
 		<id name="eventTypeId" type="int" length="6">
@@ -83,26 +96,12 @@
 		</id>
 		<property name="eventType" type="string" column="event_type"
 			length="40"></property>
-		<!-- <set name="eventDetailsDtos" table="COLLEGE_EVENT" inverse="true"
-			cascade="all" fetch="join">
-			<key>
-				<column name="event_id"></column>
-			</key>
-			<one-to-many class="com.pojo.EventDetailsDto" />
-		</set> -->
 	</class>
 	<class name="com.pojo.ScopeDetailsDto" table="EVENT_SCOPE">
 		<id name="scopeId" type="int" length="6">
 			<column name="scope_id"></column>
 		</id>
 		<property name="scope" type="string" length="40" column="scope"></property>
-		<!-- <set name="eventDetailsDtos" fetch="join" inverse="true"
-			table="COLLEGE_EVENT" cascade="all">
-			<key>
-				<column name="event_id"></column>
-			</key>
-			<one-to-many class="com.pojo.EventDetailsDto" />
-		</set> -->
 	</class>
 	<class name="com.pojo.EventUserMappingClass" table="EVENT_USERS">
 		<composite-id>

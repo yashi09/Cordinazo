@@ -63,17 +63,28 @@
 						<h4>Venue</h4>
 						<h:inputText value="#{editConferencePage.venue}"
 							styleClass="form-control"></h:inputText>
-						<h:commandButton value="Save"
+							<c:if test="${login.role eq 1}">
+								<h:commandButton value="Save"
 							action="#{editConferencePage.navNext}"
 							styleClass="btn primary-btn">
 							<f:setPropertyActionListener value="adminConferencePage"
 								target="#{editConferencePage.action}" />
-							<%-- <f:setPropertyActionListener
-								value="#{editConferencePage.conference.eventId}"
-								target="#{editConferencePage.conferenceId}" /> --%>
 							<f:setPropertyActionListener value="save"
 								target="#{editConferencePage.work}" />
 						</h:commandButton>
+							
+							</c:if>
+							<c:if test="${login.role ne 1}">
+								<h:commandButton value="Save"
+							action="#{editConferencePage.navNext}"
+							styleClass="btn primary-btn">
+							<f:setPropertyActionListener value="coordinatorPage"
+								target="#{editConferencePage.action}" />
+							<f:setPropertyActionListener value="save"
+								target="#{editConferencePage.work}" />
+						</h:commandButton>
+							</c:if>
+						
 					</h:form>
 				</div>
 			</div>

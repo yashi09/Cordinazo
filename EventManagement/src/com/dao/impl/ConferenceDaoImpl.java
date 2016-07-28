@@ -22,4 +22,18 @@ public class ConferenceDaoImpl extends BaseDao implements ConferenceDao{
 		return paperDto;
 	}
 
+	@Override
+	public void updatePaper(PaperDetailsDto paperDto) {
+		try{
+			Session session = getSession();
+			session.saveOrUpdate(paperDto);
+			commitTransaction();
+		} catch(Exception e){
+			rollBack();
+			e.printStackTrace();
+		} finally{
+			closeSession();
+		}
+	}
+
 }

@@ -38,6 +38,9 @@
 			<div class="table-responsive">
 				<h:dataTable value="#{adminConfResearchAreas.topics}" var="topic" styleClass="table table-striped">
 					<h:column>
+						<f:facet name="header">
+								<h:outputText value="Research area"></h:outputText>
+							</f:facet>
 						<h:outputText value="#{topic}"></h:outputText>
 					</h:column>
 					<h:column>
@@ -51,6 +54,7 @@
 				</div>
 			</h:form>
 		</div>
+		<t:saveState value="#{adminConfResearchAreas.topics}"></t:saveState>
 </f:view>
 </body>
 </html>

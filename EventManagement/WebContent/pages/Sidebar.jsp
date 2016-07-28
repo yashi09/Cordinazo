@@ -32,7 +32,7 @@
 							</h:commandLink></li>
 						<li><h:commandLink action="#{adminPage.navNext}"
 								value="Guest Lecture">
-								<f:setPropertyActionListener value="adminGuestLecturePage"
+								<f:setPropertyActionListener value="adminGuestLecture"
 									target="#{adminPage.action}" />
 							</h:commandLink></li>
 					</ul>

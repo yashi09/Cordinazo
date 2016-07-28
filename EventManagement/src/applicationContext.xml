@@ -23,4 +23,14 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		<property name="conferenceDao" ref="conferenceDao"></property>
 	</bean>
 	<bean id="conferenceDao" class="com.dao.impl.ConferenceDaoImpl"></bean>
+	
+	<bean id="workshopManager" class="com.manager.impl.WorkshopManagerImpl">
+		<property name="workshopDao" ref="workshopDao"></property>
+	</bean>
+	<bean id="workshopDao" class="com.dao.impl.WorkshopDaoImpl"></bean>
+	
+	<bean id="guestLectureManager" class="com.manager.impl.GuestLectureManagerImpl">
+		<property name="guestLectureDao" ref="guestLectureDao"></property>
+	</bean>
+	<bean id="guestLectureDao" class="com.dao.impl.GuestLectureDaoImpl"></bean>
 </beans>

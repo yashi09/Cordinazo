@@ -16,5 +16,9 @@ public class ConferenceManagerImpl implements ConferenceManager{
 	public void setConferenceDao(ConferenceDao conferenceDao) {
 		this.conferenceDao = conferenceDao;
 	}
+	@Override
+	public void updatePaper(PaperDetailsDto paperDto) {
+		conferenceDao.updatePaper(paperDto);
+	}
 
 }

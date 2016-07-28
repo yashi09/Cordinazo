@@ -42,9 +42,11 @@ public class EventOfFestPage extends BasePage{
 		secondPrize = eventDetail.getSecondPrize();
 		thirdPrize = eventDetail.getThirdPrize();
 
-		FacesContext context = FacesContext.getCurrentInstance();
+		/*FacesContext context = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession)context.getExternalContext().getSession(false);
-		UserDetailsDto userDetailsDto = (UserDetailsDto) session.getAttribute("loggedInDto");
+		UserDetailsDto userDetailsDto = (UserDetailsDto) session.getAttribute("loggedInDto");*/
+		
+		UserDetailsDto userDetailsDto = (UserDetailsDto)getContext().get("userKaObject");
 		System.out.println("userDetailsDto = "+userDetailsDto);
 		Set<UserDetailsDto> eventParticipants = eventDetail.getEventParticipants();
 		System.out.println("eventParticipants = "+eventParticipants);

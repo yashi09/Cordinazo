@@ -176,4 +176,14 @@ public class EventManagerImpl implements EventManager{
 		return eventDao.getAuthorsInConference(conferenceId);
 	}
 
+	@Override
+	public void deleteAllParticipantsOfEvent(int eventId) {
+		eventDao.deleteAllParticipantsOfEvent(eventId);
+	}
+
+	@Override
+	public void deleteAllVolunteersOfEvent(int eventId) {
+		eventDao.deleteAllVolunteersOfEvent(eventId);
+	}
+
 }

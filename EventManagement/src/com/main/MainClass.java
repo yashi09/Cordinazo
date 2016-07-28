@@ -10,6 +10,9 @@ public class MainClass {
 		String dateInString = "02-08-2016";
 		try {
 			Date date = sdf.parse(dateInString);
+		//	System.out.println(date);
+			date.setHours(12);
+			date.setMinutes(30);
 			System.out.println(date);
 			System.out.println(sdf.format(date));
 		} catch (ParseException e) {

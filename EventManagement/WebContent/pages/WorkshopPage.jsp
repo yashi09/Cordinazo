@@ -1,38 +1,100 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
-<%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="f" uri="http://java.sun.com/jsf/core"%>
+<%@ taglib prefix="h" uri="http://java.sun.com/jsf/html"%>
+<%@ taglib prefix="t" uri="http://myfaces.apache.org/tomahawk"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE = edge">
 <meta name="viewport" content="width = device-width, initial-scale = 1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<title>Workshop Page</title>
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-	crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-	crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-	crossorigin="anonymous"></script>
+<title>Workshop page</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="styles/dashboard.css" />
+<link rel="stylesheet" type="text/css" href="styles/bootstrap-theme.css" />
+<link rel="stylesheet" type="text/css" href="styles/external.css" />
 </head>
 <body>
-<f:view>
-	<jsp:include page="Header.jsp"></jsp:include>
-	<h:outputText>Workshop Page</h:outputText>
-</f:view>
+	<f:view>
+		<jsp:include page="Header.jsp"></jsp:include>
+	<div class="row ">
+			<div class="col-sm-12"
+				style="background-image: url('../images/workshop_banner.jpg'); background-size: cover; color: white; padding-left: 5%; padding-bottom: 10%;">
+				<h1>Workshops</h1>
+				<h3>Because in your dreams, every detail matters</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container" style="padding-top: 15px;">
+				<h:form>
+					<h:panelGrid columns="4">
+						<c:forEach items="#{workshopPage.workshops}" var="workshop">
+							<h:column>
+								<div class="col-sm-12">
+									<div class="thumbnail">
+										<h:graphicImage id="image" alt="200x200"
+											styleClass="img-thumbnail"
+											style="height: 200px; width: 200px;"
+											value="../images/#{workshop.eventName}.jpg">
+										</h:graphicImage>
+										<div class="caption">
+											<h3>
+												<h:outputText value="#{workshop.eventName}"></h:outputText>
+											</h3>
+											<p>
+												<h:outputText value="#{workshop.startDate} to #{workshop.endDate}"></h:outputText>
+											</p>
+											<p>
+												<h:outputText value="#{workshop.eventDescription}"></h:outputText>
+											</p>
+											<h:commandLink styleClass="btn secondary-button"
+												action="#{workshopPage.navNext}">
+												More details &raquo;
+												<f:setPropertyActionListener value="workshopDetailsPage"
+													target="#{workshopPage.action}" />
+												<f:setPropertyActionListener value="#{workshop.eventId}"
+													target="#{workshopPage.workshopId}" />
+											</h:commandLink>
+										</div>
+									</div>
+								</div>
+							</h:column>
+						</c:forEach>
+					</h:panelGrid>
+				</h:form>
+			</div>
+		</div>
+		<t:saveState value="#{workshopPage.workshops}"></t:saveState>
+	</f:view>
+	<script src="../js/jQuery.min.js"></script>
+	<script type="text/javascript" src="../js/ie10-viewport.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/docs.min.js"></script>
+	<script type="text/javascript" src="../js/base.js"></script>
+	<script type="text/javascript" src="../js/prettify-1.0.min.js"></script>
+	<script>
+		if (top != self) {
+			top.location.replace(self.location.href);
+		}
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-47462200-1', 'eonasdan.github.io');
+		ga('send', 'pageview');
+	</script>
 </body>
 </html>

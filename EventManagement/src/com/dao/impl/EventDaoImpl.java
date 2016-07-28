@@ -394,4 +394,40 @@ public class EventDaoImpl extends BaseDao implements EventDao{
 		}
 		return authors;
 	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void deleteAllParticipantsOfEvent(int eventId) {
+		try{
+			Session session = getSession();
+			List<EventParticipantMappingClass> eventParticipants = session.createCriteria(EventParticipantMappingClass.class).add(Restrictions.eq("eventId", eventId)).list();
+			for(EventParticipantMappingClass dto : eventParticipants){
+				session.delete(dto);
+			}
+			commitTransaction();
+		} catch(Exception e){
+			rollBack();
+			e.printStackTrace();
+		} finally{
+			closeSession();
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void deleteAllVolunteersOfEvent(int eventId) {
+		try{
+			Session session = getSession();
+			List<EventVolunteerMappingClass> eventVolunteers = session.createCriteria(EventVolunteerMappingClass.class).add(Restrictions.eq("eventId", eventId)).list();
+			for(EventVolunteerMappingClass dto : eventVolunteers){
+				session.delete(dto);
+			}
+			commitTransaction();
+		} catch(Exception e){
+			rollBack();
+			e.printStackTrace();
+		} finally{
+			closeSession();
+		}
+	}
 }

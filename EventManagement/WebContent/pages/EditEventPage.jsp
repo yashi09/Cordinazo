@@ -37,17 +37,19 @@
 						<h:inputText value="#{editEventPage.event.thirdPrize}"></h:inputText>
 						<h4>Venue</h4>
 						<h:inputText value="#{editEventPage.event.venue}"></h:inputText>
-						<c:if test="${login.role == 1}">
+						<c:if test="${login.role eq 1}">
 						<h:commandButton styleClass="btn btn-primary" value="Save event" action="#{editEventPage.navNext}">
 							<f:setPropertyActionListener value="adminEventsOfFestPage" target="#{editEventPage.action}"/>
 							<f:setPropertyActionListener value="saveEvent" target="#{editEventPage.work}"/>
 						</h:commandButton>
 						
 						</c:if>
+						<c:if test="${login.role ne 1}">
 						<h:commandButton styleClass="btn btn-primary" value="Save event" action="#{editEventPage.navNext}">
 							<f:setPropertyActionListener value="coordinatorPage" target="#{editEventPage.action}"/>
 							<f:setPropertyActionListener value="saveEvent" target="#{editEventPage.work}"/>
 						</h:commandButton>
+						</c:if>
 					</h:form>
 				</div>
 			</div>

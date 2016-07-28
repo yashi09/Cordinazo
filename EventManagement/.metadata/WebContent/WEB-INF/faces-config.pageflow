@@ -1,175 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14672317654880" configfile="/EventManagement/WebContent/WEB-INF/faces-config.xml">
   <nodes xsi:type="pageflow:PFPage" name="pages/EventPage" x="122" y="865" id="pf14675015077291" referenceLink="//@navigationRule.6/@navigationCase.1/@toViewId|" path="/pages/EventPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/SubmitPaper" id="pf14692204051342" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf14692204051353" inlinks="pf14692204051354" path="/pages/SubmitPaper.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/ConferenceDetails" id="pf14692204051355" referenceLink="//@navigationRule.6/@navigationCase.3/@toViewId|" outlinks="pf14692204051354 pf14692204051356" inlinks="pf14692204051353 pf14692204051357" path="/pages/ConferenceDetails.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/MySubmissions" id="pf14692204051358" referenceLink="//@navigationRule.1/@navigationCase.1/@toViewId|" inlinks="pf14692204051356" path="/pages/MySubmissions.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AdminConfResearchAreas" id="pf14692204051359" referenceLink="//@navigationRule.5/@navigationCase.9/@toViewId|" outlinks="pf146922040513510" inlinks="pf146922040513510 pf146922040513511" path="/pages/AdminConfResearchAreas.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/EditConferencePage" id="pf146922040513512" referenceLink="//@navigationRule.5/@navigationCase.8/@toViewId|" outlinks="pf146922040513513" inlinks="pf146922040513514" path="/pages/EditConferencePage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AdminConferencePage" id="pf146922040513515" referenceLink="//@navigationRule.16/@navigationCase.8/@toViewId|" outlinks="pf146922040513516 pf146922040513517 pf146922040513518 pf146922040513519 pf146922040513520 pf146922040513521 pf146922040513522 pf146922040513523 pf146922040513514 pf146922040513511" inlinks="pf146922040513513 pf146922040513524 pf146922040513525 pf146922040513526 pf146922040513527 pf146922040513528" path="/pages/AdminConferencePage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AddConferencePage" id="pf146922040513529" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" outlinks="pf146922040513524 pf146922040513530" inlinks="pf146922040513516" path="/pages/AddConferencePage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/LoginPage" id="pf146922040513531" referenceLink="//@navigationRule.22/@navigationCase.0/@toViewId|" outlinks="pf146922040513532 pf146922040513533" inlinks="pf146922040513530 pf146922040513517 pf146922040513534 pf146922040513535 pf146922040513536 pf146922040513537 pf146922040513538 pf146922040513539 pf146922040513540 pf146922040513541 pf146922040513542 pf146922040513543 pf146922040513544 pf146922040513533 pf146922040513545 pf146922040513546 pf146922040513547 pf146922040513548" path="/pages/LoginPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/HomePage" id="pf146922040513549" referenceLink="//@navigationRule.22/@navigationCase.2/@toViewId|" outlinks="pf146922040513550 pf146922040513551 pf146922040513552 pf146922040513553 pf146922040513554 pf146922040513555 pf146922040513542 pf146922040513556" inlinks="pf146922040513518 pf146922040513557 pf146922040513558 pf146922040513559 pf146922040513560 pf146922040513561 pf146922040513550 pf146922040513562 pf146922040513563 pf146922040513532 pf146922040513564 pf146922040513565 pf146922040513566 pf146922040513567" path="/pages/HomePage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/FestPage" id="pf146922040513568" referenceLink="//@navigationRule.22/@navigationCase.1/@toViewId|" outlinks="pf146922040513563 pf146922040513569 pf146922040513570 pf146922040513571 pf146922040513572 pf146922040513573 pf146922040513544 pf146922040513574" inlinks="pf146922040513519 pf146922040513575 pf146922040513576 pf146922040513577 pf146922040513578 pf146922040513579 pf146922040513551 pf146922040513580 pf146922040513569 pf146922040513581 pf146922040513582 pf146922040513583 pf146922040513584" path="/pages/FestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/ConferencePage" id="pf146922040513585" referenceLink="//@navigationRule.22/@navigationCase.3/@toViewId|" outlinks="pf146922040513557 pf146922040513575 pf146922040513586 pf14692204051357 pf146922040513587 pf146922040513588 pf146922040513589 pf146922040513590 pf146922040513534 pf146922040513591" inlinks="pf146922040513520 pf146922040513586 pf146922040513592 pf146922040513593 pf146922040513594 pf146922040513595 pf146922040513552 pf146922040513596 pf146922040513570 pf146922040513597 pf146922040513598 pf146922040513599 pf1469220405135100" path="/pages/ConferencePage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/GuestLecturePage" id="pf1469220405135101" referenceLink="//@navigationRule.22/@navigationCase.4/@toViewId|" outlinks="pf146922040513565 pf146922040513582 pf146922040513598 pf1469220405135102 pf1469220405135103 pf1469220405135104 pf146922040513546 pf1469220405135105" inlinks="pf146922040513521 pf146922040513587 pf1469220405135106 pf1469220405135107 pf1469220405135108 pf1469220405135109 pf146922040513553 pf1469220405135110 pf146922040513571 pf1469220405135111 pf1469220405135102 pf1469220405135112 pf1469220405135113" path="/pages/GuestLecturePage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/WorkshopPage" id="pf1469220405135114" referenceLink="//@navigationRule.22/@navigationCase.5/@toViewId|" outlinks="pf146922040513564 pf146922040513581 pf146922040513597 pf1469220405135111 pf1469220405135115 pf1469220405135116 pf146922040513545 pf1469220405135117" inlinks="pf146922040513522 pf146922040513588 pf1469220405135118 pf1469220405135119 pf1469220405135120 pf1469220405135121 pf146922040513554 pf1469220405135122 pf146922040513572 pf1469220405135115 pf1469220405135103 pf1469220405135123 pf1469220405135124" path="/pages/WorkshopPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AdminCoordsOfEventPage" id="pf1469220405135125" referenceLink="//@navigationRule.11/@navigationCase.0/@toViewId|" outlinks="pf1469220405135126 pf146922040513538 pf146922040513559 pf146922040513577 pf146922040513593 pf1469220405135107 pf1469220405135119 pf1469220405135127 pf146922040513525" inlinks="pf146922040513523 pf1469220405135126 pf1469220405135128" path="/pages/AdminCoordsOfEventPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/FestDetails" id="pf1469220405135129" referenceLink="//@navigationRule.22/@navigationCase.6/@toViewId|" outlinks="pf146922040513566 pf146922040513583 pf146922040513599 pf1469220405135112 pf1469220405135123 pf1469220405135130 pf1469220405135131 pf146922040513547 pf1469220405135132" inlinks="pf146922040513589 pf146922040513573 pf1469220405135130 pf1469220405135133" path="/pages/FestDetails.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/EventOfFestPage" id="pf1469220405135134" referenceLink="//@navigationRule.21/@navigationCase.6/@toViewId|" inlinks="pf146922040513590 pf1469220405135131" path="/pages/EventOfFestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/CoordinatorPage" id="pf1469220405135135" referenceLink="//@navigationRule.22/@navigationCase.7/@toViewId|" outlinks="pf1469220405135136 pf1469220405135137 pf1469220405135138 pf1469220405135139 pf146922040513535 pf146922040513558 pf146922040513576 pf146922040513592 pf1469220405135106 pf1469220405135118" inlinks="pf146922040513591 pf1469220405135140 pf146922040513556 pf146922040513574 pf1469220405135117 pf1469220405135105 pf1469220405135132 pf1469220405135141" path="/pages/CoordinatorPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/ViewCoordsOfEvent" id="pf1469220405135142" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" inlinks="pf1469220405135136" path="/pages/ViewCoordsOfEvent.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/EditEventPage" id="pf1469220405135143" referenceLink="//@navigationRule.11/@navigationCase.9/@toViewId|" outlinks="pf1469220405135144 pf1469220405135140 pf146922040513536 pf1469220405135145" inlinks="pf1469220405135137 pf1469220405135145 pf1469220405135146" path="/pages/EditEventPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/ParticipantsOfEvent" id="pf1469220405135147" referenceLink="//@navigationRule.7/@navigationCase.2/@toViewId|" inlinks="pf1469220405135138" path="/pages/ParticipantsOfEvent.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/VolunteersOfEvent" id="pf1469220405135148" referenceLink="//@navigationRule.7/@navigationCase.3/@toViewId|" inlinks="pf1469220405135139" path="/pages/VolunteersOfEvent.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AdminEventsOfFestPage" id="pf1469220405135149" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" inlinks="pf1469220405135144" path="/pages/AdminEventsOfFestPage"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/EditFestPage" id="pf1469220405135150" referenceLink="//@navigationRule.14/@navigationCase.2/@toViewId|" outlinks="pf1469220405135151 pf1469220405135152 pf146922040513537" inlinks="pf1469220405135151 pf1469220405135153" path="/pages/EditFestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AdminFestPage" id="pf1469220405135154" referenceLink="//@navigationRule.16/@navigationCase.6/@toViewId|" outlinks="pf1469220405135155 pf1469220405135156 pf1469220405135153 pf1469220405135157 pf146922040513541 pf146922040513561 pf146922040513579 pf146922040513595 pf1469220405135109 pf1469220405135121 pf146922040513527" inlinks="pf1469220405135152 pf1469220405135127 pf1469220405136158 pf1469220405136159 pf1469220405136160 pf1469220405135157 pf1469220405136161" path="/pages/AdminFestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AdminEventsOfFestPage" id="pf1469220405136162" referenceLink="//@navigationRule.14/@navigationCase.1/@toViewId|" outlinks="pf1469220405135128 pf146922040513539 pf1469220405136163 pf146922040513560 pf146922040513578 pf146922040513594 pf1469220405135108 pf1469220405135120 pf1469220405136158 pf1469220405135146 pf146922040513526" inlinks="pf1469220405136164 pf1469220405135156" path="/pages/AdminEventsOfFestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AddEventToFestPage" id="pf1469220405136165" referenceLink="//@navigationRule.13/@navigationCase.1/@toViewId|" outlinks="pf1469220405136159 pf1469220405136166 pf1469220405136164" inlinks="pf1469220405136163 pf1469220405136166 pf1469220405136167" path="/pages/AddEventToFestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/AddFestPage" id="pf1469220405136168" referenceLink="//@navigationRule.14/@navigationCase.0/@toViewId|" outlinks="pf1469220405136160 pf1469220405136167 pf146922040513540" inlinks="pf1469220405135155" path="/pages/AddFestPage.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/Admin" id="pf1469220405136169" referenceLink="//@navigationRule.16/@fromViewId|" outlinks="pf146922040513562 pf146922040513580 pf146922040513596 pf1469220405135110 pf1469220405135122 pf1469220405136170 pf1469220405136161 pf146922040513543 pf146922040513528" inlinks="pf146922040513555 pf1469220405136170" path="/pages/Admin.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/EventDetails" id="pf1469220405136171" referenceLink="//@navigationRule.20/@navigationCase.5/@toViewId|" inlinks="pf1469220405135116 pf1469220405135104" path="/pages/EventDetails.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="pages/EventOfFestPage" id="pf1469220405136172" referenceLink="//@navigationRule.22/@fromViewId|" outlinks="pf146922040513548 pf146922040513584 pf146922040513567 pf1469220405135100 pf1469220405135113 pf1469220405135124 pf1469220405135133 pf1469220405135141" path="/pages/EventOfFestPage"/>
-  <links id="pf14692204051353" target="pf14692204051355" source="pf14692204051342" outcome="conferenceDetails"/>
-  <links id="pf14692204051354" target="pf14692204051342" source="pf14692204051355" outcome="submitPaper"/>
-  <links id="pf14692204051356" target="pf14692204051358" source="pf14692204051355" outcome="mySubmissions"/>
-  <links id="pf146922040513510" target="pf14692204051359" source="pf14692204051359" outcome="adminConfResearchAreas"/>
-  <links id="pf146922040513513" target="pf146922040513515" source="pf146922040513512" outcome="adminConferencePage"/>
-  <links id="pf146922040513524" target="pf146922040513515" source="pf146922040513529" outcome="adminConferencePage"/>
-  <links id="pf146922040513530" target="pf146922040513531" source="pf146922040513529" outcome="loginPage"/>
-  <links id="pf146922040513516" target="pf146922040513529" source="pf146922040513515" outcome="addConference"/>
-  <links id="pf146922040513517" target="pf146922040513531" source="pf146922040513515" outcome="loginPage"/>
-  <links id="pf146922040513518" target="pf146922040513549" source="pf146922040513515" outcome="homePage"/>
-  <links id="pf146922040513519" target="pf146922040513568" source="pf146922040513515" outcome="festPage"/>
-  <links id="pf146922040513520" target="pf146922040513585" source="pf146922040513515" outcome="conferencePage"/>
-  <links id="pf146922040513521" target="pf1469220405135101" source="pf146922040513515" outcome="guestLecturePage"/>
-  <links id="pf146922040513522" target="pf1469220405135114" source="pf146922040513515" outcome="workshopPage"/>
-  <links id="pf146922040513523" target="pf1469220405135125" source="pf146922040513515" outcome="adminCoordsOfEventPage"/>
-  <links id="pf146922040513514" target="pf146922040513512" source="pf146922040513515" outcome="editConferencePage"/>
-  <links id="pf146922040513511" target="pf14692204051359" source="pf146922040513515" outcome="adminConfResearchAreas"/>
-  <links id="pf146922040513557" target="pf146922040513549" source="pf146922040513585" outcome="homePage"/>
-  <links id="pf146922040513575" target="pf146922040513568" source="pf146922040513585" outcome="festPage"/>
-  <links id="pf146922040513586" target="pf146922040513585" source="pf146922040513585" outcome="conferencePage"/>
-  <links id="pf14692204051357" target="pf14692204051355" source="pf146922040513585" outcome="conferenceDetails"/>
-  <links id="pf146922040513587" target="pf1469220405135101" source="pf146922040513585" outcome="guestLecturePage"/>
-  <links id="pf146922040513588" target="pf1469220405135114" source="pf146922040513585" outcome="workshopPage"/>
-  <links id="pf146922040513589" target="pf1469220405135129" source="pf146922040513585" outcome="festDetails"/>
-  <links id="pf146922040513590" target="pf1469220405135134" source="pf146922040513585" outcome="eventsOfFest"/>
-  <links id="pf146922040513534" target="pf146922040513531" source="pf146922040513585" outcome="loginPage"/>
-  <links id="pf146922040513591" target="pf1469220405135135" source="pf146922040513585" outcome="coordinatorPage"/>
-  <links id="pf1469220405135136" target="pf1469220405135142" source="pf1469220405135135" outcome="viewCoordsOfEvent"/>
-  <links id="pf1469220405135137" target="pf1469220405135143" source="pf1469220405135135" outcome="editEventPage"/>
-  <links id="pf1469220405135138" target="pf1469220405135147" source="pf1469220405135135" outcome="participantsOfEvent"/>
-  <links id="pf1469220405135139" target="pf1469220405135148" source="pf1469220405135135" outcome="volunteersOfEvent"/>
-  <links id="pf146922040513535" target="pf146922040513531" source="pf1469220405135135" outcome="loginPage"/>
-  <links id="pf146922040513558" target="pf146922040513549" source="pf1469220405135135" outcome="homePage"/>
-  <links id="pf146922040513576" target="pf146922040513568" source="pf1469220405135135" outcome="festPage"/>
-  <links id="pf146922040513592" target="pf146922040513585" source="pf1469220405135135" outcome="conferencePage"/>
-  <links id="pf1469220405135106" target="pf1469220405135101" source="pf1469220405135135" outcome="guestLecturePage"/>
-  <links id="pf1469220405135118" target="pf1469220405135114" source="pf1469220405135135" outcome="workshopPage"/>
-  <links id="pf1469220405135144" target="pf1469220405135149" source="pf1469220405135143" outcome="adminEventsOfFestPage"/>
-  <links id="pf1469220405135140" target="pf1469220405135135" source="pf1469220405135143" outcome="coordinatorPage"/>
-  <links id="pf146922040513536" target="pf146922040513531" source="pf1469220405135143" outcome="loginPage"/>
-  <links id="pf1469220405135145" target="pf1469220405135143" source="pf1469220405135143" outcome="editEventPage"/>
-  <links id="pf1469220405135151" target="pf1469220405135150" source="pf1469220405135150" outcome="editFestPage"/>
-  <links id="pf1469220405135152" target="pf1469220405135154" source="pf1469220405135150" outcome="adminFestPage"/>
-  <links id="pf146922040513537" target="pf146922040513531" source="pf1469220405135150" outcome="loginPage"/>
-  <links id="pf1469220405135126" target="pf1469220405135125" source="pf1469220405135125" outcome="adminCoordsOfEventPage"/>
-  <links id="pf146922040513538" target="pf146922040513531" source="pf1469220405135125" outcome="loginPage"/>
-  <links id="pf146922040513559" target="pf146922040513549" source="pf1469220405135125" outcome="homePage"/>
-  <links id="pf146922040513577" target="pf146922040513568" source="pf1469220405135125" outcome="festPage"/>
-  <links id="pf146922040513593" target="pf146922040513585" source="pf1469220405135125" outcome="conferencePage"/>
-  <links id="pf1469220405135107" target="pf1469220405135101" source="pf1469220405135125" outcome="guestLecturePage"/>
-  <links id="pf1469220405135119" target="pf1469220405135114" source="pf1469220405135125" outcome="workshopPage"/>
-  <links id="pf1469220405135127" target="pf1469220405135154" source="pf1469220405135125" outcome="adminFestPage"/>
-  <links id="pf146922040513525" target="pf146922040513515" source="pf1469220405135125" outcome="adminConferencePage"/>
-  <links id="pf1469220405135128" target="pf1469220405135125" source="pf1469220405136162" outcome="adminCoordsOfEventPage"/>
-  <links id="pf146922040513539" target="pf146922040513531" source="pf1469220405136162" outcome="loginPage"/>
-  <links id="pf1469220405136163" target="pf1469220405136165" source="pf1469220405136162" outcome="addEventToFestPage"/>
-  <links id="pf146922040513560" target="pf146922040513549" source="pf1469220405136162" outcome="homePage"/>
-  <links id="pf146922040513578" target="pf146922040513568" source="pf1469220405136162" outcome="festPage"/>
-  <links id="pf146922040513594" target="pf146922040513585" source="pf1469220405136162" outcome="conferencePage"/>
-  <links id="pf1469220405135108" target="pf1469220405135101" source="pf1469220405136162" outcome="guestLecturePage"/>
-  <links id="pf1469220405135120" target="pf1469220405135114" source="pf1469220405136162" outcome="workshopPage"/>
-  <links id="pf1469220405136158" target="pf1469220405135154" source="pf1469220405136162" outcome="adminFestPage"/>
-  <links id="pf1469220405135146" target="pf1469220405135143" source="pf1469220405136162" outcome="editEventPage"/>
-  <links id="pf146922040513526" target="pf146922040513515" source="pf1469220405136162" outcome="adminConferencePage"/>
-  <links id="pf1469220405136159" target="pf1469220405135154" source="pf1469220405136165" outcome="adminFestPage"/>
-  <links id="pf1469220405136166" target="pf1469220405136165" source="pf1469220405136165" outcome="addEventToFestPage"/>
-  <links id="pf1469220405136164" target="pf1469220405136162" source="pf1469220405136165" outcome="adminEventsOfFestPage"/>
-  <links id="pf1469220405136160" target="pf1469220405135154" source="pf1469220405136168" outcome="adminFestPage"/>
-  <links id="pf1469220405136167" target="pf1469220405136165" source="pf1469220405136168" outcome="addEventToFestPage"/>
-  <links id="pf146922040513540" target="pf146922040513531" source="pf1469220405136168" outcome="loginPage"/>
-  <links id="pf1469220405135155" target="pf1469220405136168" source="pf1469220405135154" outcome="addFest"/>
-  <links id="pf1469220405135156" target="pf1469220405136162" source="pf1469220405135154" outcome="adminEventsOfFestPage"/>
-  <links id="pf1469220405135153" target="pf1469220405135150" source="pf1469220405135154" outcome="editFestPage"/>
-  <links id="pf1469220405135157" target="pf1469220405135154" source="pf1469220405135154" outcome="adminFestPage"/>
-  <links id="pf146922040513541" target="pf146922040513531" source="pf1469220405135154" outcome="loginPage"/>
-  <links id="pf146922040513561" target="pf146922040513549" source="pf1469220405135154" outcome="homePage"/>
-  <links id="pf146922040513579" target="pf146922040513568" source="pf1469220405135154" outcome="festPage"/>
-  <links id="pf146922040513595" target="pf146922040513585" source="pf1469220405135154" outcome="conferencePage"/>
-  <links id="pf1469220405135109" target="pf1469220405135101" source="pf1469220405135154" outcome="guestLecturePage"/>
-  <links id="pf1469220405135121" target="pf1469220405135114" source="pf1469220405135154" outcome="workshopPage"/>
-  <links id="pf146922040513527" target="pf146922040513515" source="pf1469220405135154" outcome="adminConferencePage"/>
-  <links id="pf146922040513550" target="pf146922040513549" source="pf146922040513549" outcome="homePage"/>
-  <links id="pf146922040513551" target="pf146922040513568" source="pf146922040513549" outcome="festPage"/>
-  <links id="pf146922040513552" target="pf146922040513585" source="pf146922040513549" outcome="conferencePage"/>
-  <links id="pf146922040513553" target="pf1469220405135101" source="pf146922040513549" outcome="guestLecturePage"/>
-  <links id="pf146922040513554" target="pf1469220405135114" source="pf146922040513549" outcome="workshopPage"/>
-  <links id="pf146922040513555" target="pf1469220405136169" source="pf146922040513549" outcome="adminPage"/>
-  <links id="pf146922040513542" target="pf146922040513531" source="pf146922040513549" outcome="loginPage"/>
-  <links id="pf146922040513556" target="pf1469220405135135" source="pf146922040513549" outcome="coordinatorPage"/>
-  <links id="pf146922040513562" target="pf146922040513549" source="pf1469220405136169" outcome="homePage"/>
-  <links id="pf146922040513580" target="pf146922040513568" source="pf1469220405136169" outcome="festPage"/>
-  <links id="pf146922040513596" target="pf146922040513585" source="pf1469220405136169" outcome="conferencePage"/>
-  <links id="pf1469220405135110" target="pf1469220405135101" source="pf1469220405136169" outcome="guestLecturePage"/>
-  <links id="pf1469220405135122" target="pf1469220405135114" source="pf1469220405136169" outcome="workshopPage"/>
-  <links id="pf1469220405136170" target="pf1469220405136169" source="pf1469220405136169" outcome="adminPage"/>
-  <links id="pf1469220405136161" target="pf1469220405135154" source="pf1469220405136169" outcome="adminFestPage"/>
-  <links id="pf146922040513543" target="pf146922040513531" source="pf1469220405136169" outcome="loginPage"/>
-  <links id="pf146922040513528" target="pf146922040513515" source="pf1469220405136169" outcome="adminConferencePage"/>
-  <links id="pf146922040513563" target="pf146922040513549" source="pf146922040513568" outcome="homePage"/>
-  <links id="pf146922040513569" target="pf146922040513568" source="pf146922040513568" outcome="festPage"/>
-  <links id="pf146922040513570" target="pf146922040513585" source="pf146922040513568" outcome="conferencePage"/>
-  <links id="pf146922040513571" target="pf1469220405135101" source="pf146922040513568" outcome="guestLecturePage"/>
-  <links id="pf146922040513572" target="pf1469220405135114" source="pf146922040513568" outcome="workshopPage"/>
-  <links id="pf146922040513573" target="pf1469220405135129" source="pf146922040513568" outcome="festDetails"/>
-  <links id="pf146922040513544" target="pf146922040513531" source="pf146922040513568" outcome="loginPage"/>
-  <links id="pf146922040513574" target="pf1469220405135135" source="pf146922040513568" outcome="coordinatorPage"/>
-  <links id="pf146922040513532" target="pf146922040513549" source="pf146922040513531" outcome="homePage"/>
-  <links id="pf146922040513533" target="pf146922040513531" source="pf146922040513531" outcome="login"/>
-  <links id="pf146922040513564" target="pf146922040513549" source="pf1469220405135114" outcome="homePage"/>
-  <links id="pf146922040513581" target="pf146922040513568" source="pf1469220405135114" outcome="festPage"/>
-  <links id="pf146922040513597" target="pf146922040513585" source="pf1469220405135114" outcome="conferencePage"/>
-  <links id="pf1469220405135111" target="pf1469220405135101" source="pf1469220405135114" outcome="guestLecturePage"/>
-  <links id="pf1469220405135115" target="pf1469220405135114" source="pf1469220405135114" outcome="workshopPage"/>
-  <links id="pf1469220405135116" target="pf1469220405136171" source="pf1469220405135114" outcome="eventDetails"/>
-  <links id="pf146922040513545" target="pf146922040513531" source="pf1469220405135114" outcome="loginPage"/>
-  <links id="pf1469220405135117" target="pf1469220405135135" source="pf1469220405135114" outcome="coordinatorPage"/>
-  <links id="pf146922040513565" target="pf146922040513549" source="pf1469220405135101" outcome="homePage"/>
-  <links id="pf146922040513582" target="pf146922040513568" source="pf1469220405135101" outcome="festPage"/>
-  <links id="pf146922040513598" target="pf146922040513585" source="pf1469220405135101" outcome="conferencePage"/>
-  <links id="pf1469220405135102" target="pf1469220405135101" source="pf1469220405135101" outcome="guestLecturePage"/>
-  <links id="pf1469220405135103" target="pf1469220405135114" source="pf1469220405135101" outcome="workshopPage"/>
-  <links id="pf1469220405135104" target="pf1469220405136171" source="pf1469220405135101" outcome="eventDetails"/>
-  <links id="pf146922040513546" target="pf146922040513531" source="pf1469220405135101" outcome="loginPage"/>
-  <links id="pf1469220405135105" target="pf1469220405135135" source="pf1469220405135101" outcome="coordinatorPage"/>
-  <links id="pf146922040513566" target="pf146922040513549" source="pf1469220405135129" outcome="homePage"/>
-  <links id="pf146922040513583" target="pf146922040513568" source="pf1469220405135129" outcome="festPage"/>
-  <links id="pf146922040513599" target="pf146922040513585" source="pf1469220405135129" outcome="conferencePage"/>
-  <links id="pf1469220405135112" target="pf1469220405135101" source="pf1469220405135129" outcome="guestLecturePage"/>
-  <links id="pf1469220405135123" target="pf1469220405135114" source="pf1469220405135129" outcome="workshopPage"/>
-  <links id="pf1469220405135130" target="pf1469220405135129" source="pf1469220405135129" outcome="festDetails"/>
-  <links id="pf1469220405135131" target="pf1469220405135134" source="pf1469220405135129" outcome="eventsOfFest"/>
-  <links id="pf146922040513547" target="pf146922040513531" source="pf1469220405135129" outcome="loginPage"/>
-  <links id="pf1469220405135132" target="pf1469220405135135" source="pf1469220405135129" outcome="coordinatorPage"/>
-  <links id="pf146922040513548" target="pf146922040513531" source="pf1469220405136172" outcome="loginPage"/>
-  <links id="pf146922040513584" target="pf146922040513568" source="pf1469220405136172" outcome="festPage"/>
-  <links id="pf146922040513567" target="pf146922040513549" source="pf1469220405136172" outcome="homePage"/>
-  <links id="pf1469220405135100" target="pf146922040513585" source="pf1469220405136172" outcome="conferencePage"/>
-  <links id="pf1469220405135113" target="pf1469220405135101" source="pf1469220405136172" outcome="guestLecturePage"/>
-  <links id="pf1469220405135124" target="pf1469220405135114" source="pf1469220405136172" outcome="workshopPage"/>
-  <links id="pf1469220405135133" target="pf1469220405135129" source="pf1469220405136172" outcome="festDetails"/>
-  <links id="pf1469220405135141" target="pf1469220405135135" source="pf1469220405136172" outcome="coordinatorPage"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EditGuestLecture" id="pf1469689175163201" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf1469689175163202 pf146970225815418" inlinks="pf1469689175163203" path="/pages/EditGuestLecture.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminGuestLecture" id="pf1469689175163204" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf1469689175163205 pf1469689175163206 pf1469689175163207 pf1469689175163203 pf146970222830511 pf146970222830512 pf146970222830513 pf146970222830514 pf146970222830515 pf146970222830516 pf146970222830517" inlinks="pf1469689175163202 pf1469689175163208 pf1469689175163206 pf1469689175163209" path="/pages/AdminGuestLecture.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AddGuestLecture" id="pf1469689175163210" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf1469689175163208" inlinks="pf1469689175163205" path="/pages/AddGuestLecture.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminCoordsOfEventPage" id="pf1469689175163211" referenceLink="//@navigationRule.18/@navigationCase.0/@toViewId|" outlinks="pf1469689175163212 pf1469689175163213 pf1469689175163214 pf1469689175163215 pf1469689175163216 pf1469689175163218 pf1469689175163219 pf1469689175163220 pf1469690097257406" inlinks="pf1469689175163207 pf1469689175163221 pf1469689175163222 pf1469689175163212 pf1469689175163223" path="/pages/AdminCoordsOfEventPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EditWorkshopPage" id="pf1469689175163224" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf1469689175163225 pf146970220511310" inlinks="pf1469689175163226" path="/pages/EditWorkshopPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminWorkshopPage" id="pf1469689175163227" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf1469689175163228 pf1469689175163221 pf1469689175163226 pf14697021731113 pf14697021731114 pf14697021731115 pf14697021731116 pf14697021731117 pf14697021731118 pf14697021731119" inlinks="pf1469689175163225 pf1469689175163229 pf1469689175163230" path="/pages/AdminWorkshopPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AddWorkshopPage" id="pf1469689175163231" referenceLink="//@navigationRule.23/@navigationCase.4/@toViewId|" outlinks="pf1469689175163229" inlinks="pf1469689175163228 pf1469689175163232" path="/pages/AddWorkshopPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/SubmitPaper" id="pf1469689175163233" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" outlinks="pf1469689175163234" inlinks="pf1469689175163235" path="/pages/SubmitPaper.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ConferenceDetails" id="pf1469689175163236" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf1469689175163235 pf1469689175163237 pf14697021390622" inlinks="pf1469689175163234 pf1469689175163238" path="/pages/ConferenceDetails.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/MySubmissions" id="pf1469689175163239" referenceLink="//@navigationRule.8/@navigationCase.1/@toViewId|" inlinks="pf1469689175163237" path="/pages/MySubmissions.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminConfResearchAreas" id="pf1469689175163240" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf1469689175163241 pf1469689175163242 pf1469689175163243 pf1469689175163244 pf1469689175163245 pf1469689175163247 pf14697020974841" inlinks="pf1469689175163241 pf1469689175163248" path="/pages/AdminConfResearchAreas.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/LoginPage" id="pf1469689175163249" referenceLink="//@navigationRule.0/@navigationCase.7/@toViewId|" outlinks="pf1469689175163250 pf1469689175163251" inlinks="pf1469689175163242 pf1469689175163252 pf1469689175163253 pf1469689175163254 pf1469689175163255 pf1469689175163256 pf1469689175163257 pf1469689175163213 pf1469689175163258 pf1469689175163259 pf1469689175163260 pf1469689175163261 pf1469689175163262 pf1469689175163263 pf1469689175163251 pf1469689175163264 pf1469689175163265 pf1469689175163266 pf1469689175164267 pf14697021731119 pf146970222830517 pf146970226861019" path="/pages/LoginPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/HomePage" id="pf1469689175164268" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" outlinks="pf1469689175164269 pf1469689175164270 pf1469689175164271 pf1469689175164273 pf1469689175164274 pf1469689175163261 pf1469689175164275 pf1469690690944416" inlinks="pf1469689175163243 pf1469689175164276 pf1469689175164277 pf1469689175164278 pf1469689175163214 pf1469689175164279 pf1469689175164280 pf1469689175164269 pf1469689175164281 pf1469689175164282 pf1469689175163250 pf1469689175164283 pf1469689175164284 pf1469689175164285 pf1469689175164286 pf14697021731113 pf146970222830511 pf146970226861020" path="/pages/HomePage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/FestPage" id="pf1469689175164287" referenceLink="//@navigationRule.0/@navigationCase.2/@toViewId|" outlinks="pf1469689175164282 pf1469689175164288 pf1469689175164289 pf1469689175164291 pf1469689175164292 pf1469689175163263 pf1469689175164293 pf1469690717787419" inlinks="pf1469689175163244 pf1469689175164294 pf1469689175164295 pf1469689175164296 pf1469689175163215 pf1469689175164297 pf1469689175164298 pf1469689175164270 pf1469689175164299 pf1469689175164288 pf1469689175164300 pf1469689175164301 pf1469689175164302 pf1469689175164303 pf14697021731114 pf146970222830512 pf146970226861121" path="/pages/FestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ConferencePage" id="pf1469689175164304" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" outlinks="pf1469689175164277 pf1469689175164295 pf1469689175164305 pf1469689175163238 pf1469689175164307 pf1469689175164308 pf1469689175164309 pf1469689175163254 pf1469689175164310 pf1469689746818402" inlinks="pf1469689175163245 pf1469689175164311 pf1469689175164305 pf1469689175164312 pf1469689175163216 pf1469689175164313 pf1469689175164314 pf1469689175164271 pf1469689175164315 pf1469689175164289 pf1469689175164316 pf1469689175164317 pf1469689175164318 pf1469689175164319 pf14697021731115 pf146970222830513 pf146970226861122" path="/pages/ConferencePage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/GuestLecturePage" id="pf1469689175164320" referenceLink="//@navigationRule.27/@fromViewId|" outlinks="pf1469689175164284 pf1469689175164301 pf1469689175164317 pf1469689175164321 pf1469689175164322 pf1469689175164323 pf1469689175163265 pf1469689175164324" inlinks="pf1469689175164321 pf1469691508596424" path="/pages/GuestLecturePage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/WorkshopPage" id="pf1469689175164333" referenceLink="//@navigationRule.0/@navigationCase.5/@toViewId|" outlinks="pf1469689175164283 pf1469689175164300 pf1469689175164316 pf1469689175164334 pf1469689175164335 pf1469689175163264 pf1469689175164336 pf1469689175164337 pf1469690726594420" inlinks="pf1469689175163247 pf1469689175164338 pf1469689175164307 pf1469689175164339 pf1469689175163218 pf1469689175164340 pf1469689175164341 pf1469689175164273 pf1469689175164342 pf1469689175164291 pf1469689175164334 pf1469689175164322 pf1469689175164343 pf1469689175164344 pf14697021731117 pf146970222830515 pf146970226861123" path="/pages/WorkshopPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EditConferencePage" id="pf1469689175164345" referenceLink="//@navigationRule.10/@fromViewId|" outlinks="pf1469689175164346 pf14697020763370" inlinks="pf1469689175164347" path="/pages/EditConferencePage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminConferencePage" id="pf1469689175164348" referenceLink="//@navigationRule.23/@navigationCase.11/@toViewId|" outlinks="pf1469689175164349 pf1469689175164350 pf1469689175163253 pf1469689175164276 pf1469689175164294 pf1469689175164311 pf1469689175164338 pf1469689175163222 pf1469689175164347 pf1469689175163248 pf1469689746819403" inlinks="pf1469689175164346 pf1469689175166351 pf1469689175163220 pf1469689175166352 pf1469689175166353 pf1469689175166354" path="/pages/AdminConferencePage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AddConferencePage" id="pf1469689175166355" referenceLink="//@navigationRule.12/@navigationCase.0/@toViewId|" outlinks="pf1469689175166351 pf1469689175163252" inlinks="pf1469689175164349" path="/pages/AddConferencePage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminPapersOfConf" id="pf1469689175166356" referenceLink="//@navigationRule.12/@navigationCase.1/@toViewId|" inlinks="pf1469689175164350" path="/pages/AdminPapersOfConf.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/FestDetails" id="pf1469689175166357" referenceLink="//@navigationRule.29/@navigationCase.6/@toViewId|" outlinks="pf1469689175164285 pf1469689175164302 pf1469689175164318 pf1469689175164343 pf1469689175166358 pf1469689175166359 pf1469689175163266 pf1469689175166360 pf1469690758255422" inlinks="pf1469689175164308 pf1469689175164292 pf1469689175166358 pf1469689175166361" path="/pages/FestDetails.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EventOfFestPage" id="pf1469689175166362" referenceLink="//@navigationRule.28/@navigationCase.6/@toViewId|" inlinks="pf1469689175164309 pf1469689175166359" path="/pages/EventOfFestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/CoordinatorPage" id="pf1469689175166363" referenceLink="//@navigationRule.0/@navigationCase.8/@toViewId|" outlinks="pf1469689175166364 pf1469689175166365 pf1469689175166366 pf1469689175166367 pf1469689175163255 pf1469689175164278 pf1469689175164296 pf1469689175164312 pf1469689175164339 pf1469689746819404" inlinks="pf1469689175164310 pf1469689175166368 pf1469689175164275 pf1469689175164293 pf1469689175164336 pf1469689175164324 pf1469689175166360 pf1469689175166369 pf14697020763370 pf14697021390622 pf146970220511310 pf146970225815418 pf146970226861124" path="/pages/CoordinatorPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ViewCoordsOfEvent" id="pf1469689175166370" referenceLink="//@navigationRule.14/@navigationCase.0/@toViewId|" inlinks="pf1469689175166364" path="/pages/ViewCoordsOfEvent.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EditEventPage" id="pf1469689175166371" referenceLink="//@navigationRule.18/@navigationCase.9/@toViewId|" outlinks="pf1469689175166372 pf1469689175166368 pf1469689175163256 pf1469689175166373" inlinks="pf1469689175166365 pf1469689175166373 pf1469689175166374" path="/pages/EditEventPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/ParticipantsOfEvent" id="pf1469689175166375" referenceLink="//@navigationRule.14/@navigationCase.2/@toViewId|" inlinks="pf1469689175166366" path="/pages/ParticipantsOfEvent.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/VolunteersOfEvent" id="pf1469689175166376" referenceLink="//@navigationRule.14/@navigationCase.3/@toViewId|" inlinks="pf1469689175166367" path="/pages/VolunteersOfEvent.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminEventsOfFestPage" id="pf1469689175167377" referenceLink="//@navigationRule.15/@navigationCase.0/@toViewId|" inlinks="pf1469689175166372" path="/pages/AdminEventsOfFestPage"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EditFestPage" id="pf1469689175167378" referenceLink="//@navigationRule.21/@navigationCase.2/@toViewId|" outlinks="pf1469689175167379 pf1469689175167380 pf1469689175163257" inlinks="pf1469689175167379 pf1469689175167381" path="/pages/EditFestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminFestPage" id="pf1469689175167382" referenceLink="//@navigationRule.23/@navigationCase.9/@toViewId|" outlinks="pf1469689175167383 pf1469689175167384 pf1469689175167381 pf1469689175167385 pf1469689175163260 pf1469689175164280 pf1469689175164298 pf1469689175164314 pf1469689175164341 pf1469689175166353 pf1469690097257408" inlinks="pf1469689175167380 pf1469689175163219 pf1469689175167386 pf1469689175167387 pf1469689175167388 pf1469689175167385 pf1469689175167389" path="/pages/AdminFestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AdminEventsOfFestPage" id="pf1469689175167390" referenceLink="//@navigationRule.21/@navigationCase.1/@toViewId|" outlinks="pf1469689175163223 pf1469689175163258 pf1469689175167391 pf1469689175164279 pf1469689175164297 pf1469689175164313 pf1469689175164340 pf1469689175167386 pf1469689175166374 pf1469689175166352 pf1469690097257409" inlinks="pf1469689175167392 pf1469689175167384" path="/pages/AdminEventsOfFestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AddEventToFestPage" id="pf1469689175167393" referenceLink="//@navigationRule.20/@navigationCase.1/@toViewId|" outlinks="pf1469689175167387 pf1469689175167394 pf1469689175167392" inlinks="pf1469689175167391 pf1469689175167394 pf1469689175167395" path="/pages/AddEventToFestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/AddFestPage" id="pf1469689175167396" referenceLink="//@navigationRule.21/@navigationCase.0/@toViewId|" outlinks="pf1469689175167388 pf1469689175167395 pf1469689175163259" inlinks="pf1469689175167383" path="/pages/AddFestPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/Admin" id="pf1469689175167397" referenceLink="//@navigationRule.0/@navigationCase.6/@toViewId|" outlinks="pf1469689175164281 pf1469689175163230 pf1469689175163209 pf1469689175164299 pf1469689175163232 pf1469689175164315 pf1469689175164342 pf1469689175167398 pf1469689175167389 pf1469689175163262 pf1469689175166354 pf1469690707161418" inlinks="pf1469689175164274 pf1469689175167398 pf14697021731118 pf146970222830516 pf146970226861125" path="/pages/Admin.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EventDetails" id="pf1469689175167399" referenceLink="//@navigationRule.27/@navigationCase.5/@toViewId|" inlinks="pf1469689175164335 pf1469689175164323" path="/pages/EventDetails.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/WorkshopDetailsPage" id="pf1469689175167400" referenceLink="//@navigationRule.26/@navigationCase.8/@toViewId|" inlinks="pf1469689175164337" path="/pages/WorkshopDetailsPage.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/EventOfFestPage" id="pf1469689175167401" referenceLink="//@navigationRule.29/@fromViewId|" outlinks="pf1469689175164267 pf1469689175164303 pf1469689175164286 pf1469689175164319 pf1469689175164344 pf1469689175166361 pf1469689175166369 pf1469690773893423" path="/pages/EventOfFestPage"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/GuestLectureHome" id="pf1469689746819405" referenceLink="//@navigationRule.9/@navigationCase.5/@toViewId|" inlinks="pf1469689746819403 pf1469689746818402 pf1469689746819404 pf1469690097257406 pf1469690097257409 pf1469690097257408 pf14697020974841" path="/pages/GuestLectureHome.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/GuestLecturesHome" id="pf1469690690944417" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf1469691508596424 pf146970226861020 pf146970226861121 pf146970226861122 pf146970226861126 pf146970226861123 pf146970226861125 pf146970226861019 pf146970226861124" inlinks="pf1469690690944416 pf1469690707161418 pf1469690717787419 pf1469690726594420 pf1469690758255422 pf1469690773893423 pf14697021731116 pf146970222830514 pf146970226861126" path="/pages/GuestLecturesHome.jsp"/>
+  <links id="pf1469689175163202" target="pf1469689175163204" source="pf1469689175163201" outcome="adminGuestLecture"/>
+  <links id="pf1469689175163208" target="pf1469689175163204" source="pf1469689175163210" outcome="adminGuestLecture"/>
+  <links id="pf1469689175163205" target="pf1469689175163210" source="pf1469689175163204" outcome="addGuestLecture"/>
+  <links id="pf1469689175163206" target="pf1469689175163204" source="pf1469689175163204" outcome="adminGuestLecture"/>
+  <links id="pf1469689175163207" target="pf1469689175163211" source="pf1469689175163204" outcome="adminCoordsOfEventPage"/>
+  <links id="pf1469689175163203" target="pf1469689175163201" source="pf1469689175163204" outcome="editGuestLecture"/>
+  <links id="pf1469689175163225" target="pf1469689175163227" source="pf1469689175163224" outcome="adminWorkshopPage"/>
+  <links id="pf1469689175163229" target="pf1469689175163227" source="pf1469689175163231" outcome="adminWorkshopPage"/>
+  <links id="pf1469689175163228" target="pf1469689175163231" source="pf1469689175163227" outcome="addWorkshopPage"/>
+  <links id="pf1469689175163221" target="pf1469689175163211" source="pf1469689175163227" outcome="adminCoordsOfEventPage"/>
+  <links id="pf1469689175163226" target="pf1469689175163224" source="pf1469689175163227" outcome="editWorkshopPage"/>
+  <links id="pf1469689175163234" target="pf1469689175163236" source="pf1469689175163233" outcome="conferenceDetails"/>
+  <links id="pf1469689175163235" target="pf1469689175163233" source="pf1469689175163236" outcome="submitPaper"/>
+  <links id="pf1469689175163237" target="pf1469689175163239" source="pf1469689175163236" outcome="mySubmissions"/>
+  <links id="pf1469689175163241" target="pf1469689175163240" source="pf1469689175163240" outcome="adminConfResearchAreas"/>
+  <links id="pf1469689175163242" target="pf1469689175163249" source="pf1469689175163240" outcome="loginPage"/>
+  <links id="pf1469689175163243" target="pf1469689175164268" source="pf1469689175163240" outcome="homePage"/>
+  <links id="pf1469689175163244" target="pf1469689175164287" source="pf1469689175163240" outcome="festPage"/>
+  <links id="pf1469689175163245" target="pf1469689175164304" source="pf1469689175163240" outcome="conferencePage"/>
+  <links id="pf1469689175163247" target="pf1469689175164333" source="pf1469689175163240" outcome="workshopPage"/>
+  <links id="pf1469689175164346" target="pf1469689175164348" source="pf1469689175164345" outcome="adminConferencePage"/>
+  <links id="pf1469689175166351" target="pf1469689175164348" source="pf1469689175166355" outcome="adminConferencePage"/>
+  <links id="pf1469689175163252" target="pf1469689175163249" source="pf1469689175166355" outcome="loginPage"/>
+  <links id="pf1469689175164349" target="pf1469689175166355" source="pf1469689175164348" outcome="addConference"/>
+  <links id="pf1469689175164350" target="pf1469689175166356" source="pf1469689175164348" outcome="adminPapersOfConf"/>
+  <links id="pf1469689175163253" target="pf1469689175163249" source="pf1469689175164348" outcome="loginPage"/>
+  <links id="pf1469689175164276" target="pf1469689175164268" source="pf1469689175164348" outcome="homePage"/>
+  <links id="pf1469689175164294" target="pf1469689175164287" source="pf1469689175164348" outcome="festPage"/>
+  <links id="pf1469689175164311" target="pf1469689175164304" source="pf1469689175164348" outcome="conferencePage"/>
+  <links id="pf1469689175164338" target="pf1469689175164333" source="pf1469689175164348" outcome="workshopPage"/>
+  <links id="pf1469689175163222" target="pf1469689175163211" source="pf1469689175164348" outcome="adminCoordsOfEventPage"/>
+  <links id="pf1469689175164347" target="pf1469689175164345" source="pf1469689175164348" outcome="editConferencePage"/>
+  <links id="pf1469689175163248" target="pf1469689175163240" source="pf1469689175164348" outcome="adminConfResearchAreas"/>
+  <links id="pf1469689175164277" target="pf1469689175164268" source="pf1469689175164304" outcome="homePage"/>
+  <links id="pf1469689175164295" target="pf1469689175164287" source="pf1469689175164304" outcome="festPage"/>
+  <links id="pf1469689175164305" target="pf1469689175164304" source="pf1469689175164304" outcome="conferencePage"/>
+  <links id="pf1469689175163238" target="pf1469689175163236" source="pf1469689175164304" outcome="conferenceDetails"/>
+  <links id="pf1469689175164307" target="pf1469689175164333" source="pf1469689175164304" outcome="workshopPage"/>
+  <links id="pf1469689175164308" target="pf1469689175166357" source="pf1469689175164304" outcome="festDetails"/>
+  <links id="pf1469689175164309" target="pf1469689175166362" source="pf1469689175164304" outcome="eventsOfFest"/>
+  <links id="pf1469689175163254" target="pf1469689175163249" source="pf1469689175164304" outcome="loginPage"/>
+  <links id="pf1469689175164310" target="pf1469689175166363" source="pf1469689175164304" outcome="coordinatorPage"/>
+  <links id="pf1469689175166364" target="pf1469689175166370" source="pf1469689175166363" outcome="viewCoordsOfEvent"/>
+  <links id="pf1469689175166365" target="pf1469689175166371" source="pf1469689175166363" outcome="editEventPage"/>
+  <links id="pf1469689175166366" target="pf1469689175166375" source="pf1469689175166363" outcome="participantsOfEvent"/>
+  <links id="pf1469689175166367" target="pf1469689175166376" source="pf1469689175166363" outcome="volunteersOfEvent"/>
+  <links id="pf1469689175163255" target="pf1469689175163249" source="pf1469689175166363" outcome="loginPage"/>
+  <links id="pf1469689175164278" target="pf1469689175164268" source="pf1469689175166363" outcome="homePage"/>
+  <links id="pf1469689175164296" target="pf1469689175164287" source="pf1469689175166363" outcome="festPage"/>
+  <links id="pf1469689175164312" target="pf1469689175164304" source="pf1469689175166363" outcome="conferencePage"/>
+  <links id="pf1469689175164339" target="pf1469689175164333" source="pf1469689175166363" outcome="workshopPage"/>
+  <links id="pf1469689175166372" target="pf1469689175167377" source="pf1469689175166371" outcome="adminEventsOfFestPage"/>
+  <links id="pf1469689175166368" target="pf1469689175166363" source="pf1469689175166371" outcome="coordinatorPage"/>
+  <links id="pf1469689175163256" target="pf1469689175163249" source="pf1469689175166371" outcome="loginPage"/>
+  <links id="pf1469689175166373" target="pf1469689175166371" source="pf1469689175166371" outcome="editEventPage"/>
+  <links id="pf1469689175167379" target="pf1469689175167378" source="pf1469689175167378" outcome="editFestPage"/>
+  <links id="pf1469689175167380" target="pf1469689175167382" source="pf1469689175167378" outcome="adminFestPage"/>
+  <links id="pf1469689175163257" target="pf1469689175163249" source="pf1469689175167378" outcome="loginPage"/>
+  <links id="pf1469689175163212" target="pf1469689175163211" source="pf1469689175163211" outcome="adminCoordsOfEventPage"/>
+  <links id="pf1469689175163213" target="pf1469689175163249" source="pf1469689175163211" outcome="loginPage"/>
+  <links id="pf1469689175163214" target="pf1469689175164268" source="pf1469689175163211" outcome="homePage"/>
+  <links id="pf1469689175163215" target="pf1469689175164287" source="pf1469689175163211" outcome="festPage"/>
+  <links id="pf1469689175163216" target="pf1469689175164304" source="pf1469689175163211" outcome="conferencePage"/>
+  <links id="pf1469689175163218" target="pf1469689175164333" source="pf1469689175163211" outcome="workshopPage"/>
+  <links id="pf1469689175163219" target="pf1469689175167382" source="pf1469689175163211" outcome="adminFestPage"/>
+  <links id="pf1469689175163220" target="pf1469689175164348" source="pf1469689175163211" outcome="adminConferencePage"/>
+  <links id="pf1469689175163223" target="pf1469689175163211" source="pf1469689175167390" outcome="adminCoordsOfEventPage"/>
+  <links id="pf1469689175163258" target="pf1469689175163249" source="pf1469689175167390" outcome="loginPage"/>
+  <links id="pf1469689175167391" target="pf1469689175167393" source="pf1469689175167390" outcome="addEventToFestPage"/>
+  <links id="pf1469689175164279" target="pf1469689175164268" source="pf1469689175167390" outcome="homePage"/>
+  <links id="pf1469689175164297" target="pf1469689175164287" source="pf1469689175167390" outcome="festPage"/>
+  <links id="pf1469689175164313" target="pf1469689175164304" source="pf1469689175167390" outcome="conferencePage"/>
+  <links id="pf1469689175164340" target="pf1469689175164333" source="pf1469689175167390" outcome="workshopPage"/>
+  <links id="pf1469689175167386" target="pf1469689175167382" source="pf1469689175167390" outcome="adminFestPage"/>
+  <links id="pf1469689175166374" target="pf1469689175166371" source="pf1469689175167390" outcome="editEventPage"/>
+  <links id="pf1469689175166352" target="pf1469689175164348" source="pf1469689175167390" outcome="adminConferencePage"/>
+  <links id="pf1469689175167387" target="pf1469689175167382" source="pf1469689175167393" outcome="adminFestPage"/>
+  <links id="pf1469689175167394" target="pf1469689175167393" source="pf1469689175167393" outcome="addEventToFestPage"/>
+  <links id="pf1469689175167392" target="pf1469689175167390" source="pf1469689175167393" outcome="adminEventsOfFestPage"/>
+  <links id="pf1469689175167388" target="pf1469689175167382" source="pf1469689175167396" outcome="adminFestPage"/>
+  <links id="pf1469689175167395" target="pf1469689175167393" source="pf1469689175167396" outcome="addEventToFestPage"/>
+  <links id="pf1469689175163259" target="pf1469689175163249" source="pf1469689175167396" outcome="loginPage"/>
+  <links id="pf1469689175167383" target="pf1469689175167396" source="pf1469689175167382" outcome="addFest"/>
+  <links id="pf1469689175167384" target="pf1469689175167390" source="pf1469689175167382" outcome="adminEventsOfFestPage"/>
+  <links id="pf1469689175167381" target="pf1469689175167378" source="pf1469689175167382" outcome="editFestPage"/>
+  <links id="pf1469689175167385" target="pf1469689175167382" source="pf1469689175167382" outcome="adminFestPage"/>
+  <links id="pf1469689175163260" target="pf1469689175163249" source="pf1469689175167382" outcome="loginPage"/>
+  <links id="pf1469689175164280" target="pf1469689175164268" source="pf1469689175167382" outcome="homePage"/>
+  <links id="pf1469689175164298" target="pf1469689175164287" source="pf1469689175167382" outcome="festPage"/>
+  <links id="pf1469689175164314" target="pf1469689175164304" source="pf1469689175167382" outcome="conferencePage"/>
+  <links id="pf1469689175164341" target="pf1469689175164333" source="pf1469689175167382" outcome="workshopPage"/>
+  <links id="pf1469689175166353" target="pf1469689175164348" source="pf1469689175167382" outcome="adminConferencePage"/>
+  <links id="pf1469689175164269" target="pf1469689175164268" source="pf1469689175164268" outcome="homePage"/>
+  <links id="pf1469689175164270" target="pf1469689175164287" source="pf1469689175164268" outcome="festPage"/>
+  <links id="pf1469689175164271" target="pf1469689175164304" source="pf1469689175164268" outcome="conferencePage"/>
+  <links id="pf1469689175164273" target="pf1469689175164333" source="pf1469689175164268" outcome="workshopPage"/>
+  <links id="pf1469689175164274" target="pf1469689175167397" source="pf1469689175164268" outcome="adminPage"/>
+  <links id="pf1469689175163261" target="pf1469689175163249" source="pf1469689175164268" outcome="loginPage"/>
+  <links id="pf1469689175164275" target="pf1469689175166363" source="pf1469689175164268" outcome="coordinatorPage"/>
+  <links id="pf1469689175164281" target="pf1469689175164268" source="pf1469689175167397" outcome="homePage"/>
+  <links id="pf1469689175163230" target="pf1469689175163227" source="pf1469689175167397" outcome="adminWorkshopPage"/>
+  <links id="pf1469689175163209" target="pf1469689175163204" source="pf1469689175167397" outcome="adminGuestLecture"/>
+  <links id="pf1469689175164299" target="pf1469689175164287" source="pf1469689175167397" outcome="festPage"/>
+  <links id="pf1469689175163232" target="pf1469689175163231" source="pf1469689175167397" outcome="addWorkshopPage"/>
+  <links id="pf1469689175164315" target="pf1469689175164304" source="pf1469689175167397" outcome="conferencePage"/>
+  <links id="pf1469689175164342" target="pf1469689175164333" source="pf1469689175167397" outcome="workshopPage"/>
+  <links id="pf1469689175167398" target="pf1469689175167397" source="pf1469689175167397" outcome="adminPage"/>
+  <links id="pf1469689175167389" target="pf1469689175167382" source="pf1469689175167397" outcome="adminFestPage"/>
+  <links id="pf1469689175163262" target="pf1469689175163249" source="pf1469689175167397" outcome="loginPage"/>
+  <links id="pf1469689175166354" target="pf1469689175164348" source="pf1469689175167397" outcome="adminConferencePage"/>
+  <links id="pf1469689175164282" target="pf1469689175164268" source="pf1469689175164287" outcome="homePage"/>
+  <links id="pf1469689175164288" target="pf1469689175164287" source="pf1469689175164287" outcome="festPage"/>
+  <links id="pf1469689175164289" target="pf1469689175164304" source="pf1469689175164287" outcome="conferencePage"/>
+  <links id="pf1469689175164291" target="pf1469689175164333" source="pf1469689175164287" outcome="workshopPage"/>
+  <links id="pf1469689175164292" target="pf1469689175166357" source="pf1469689175164287" outcome="festDetails"/>
+  <links id="pf1469689175163263" target="pf1469689175163249" source="pf1469689175164287" outcome="loginPage"/>
+  <links id="pf1469689175164293" target="pf1469689175166363" source="pf1469689175164287" outcome="coordinatorPage"/>
+  <links id="pf1469689175163250" target="pf1469689175164268" source="pf1469689175163249" outcome="homePage"/>
+  <links id="pf1469689175163251" target="pf1469689175163249" source="pf1469689175163249" outcome="login"/>
+  <links id="pf1469689175164283" target="pf1469689175164268" source="pf1469689175164333" outcome="homePage"/>
+  <links id="pf1469689175164300" target="pf1469689175164287" source="pf1469689175164333" outcome="festPage"/>
+  <links id="pf1469689175164316" target="pf1469689175164304" source="pf1469689175164333" outcome="conferencePage"/>
+  <links id="pf1469689175164334" target="pf1469689175164333" source="pf1469689175164333" outcome="workshopPage"/>
+  <links id="pf1469689175164335" target="pf1469689175167399" source="pf1469689175164333" outcome="eventDetails"/>
+  <links id="pf1469689175163264" target="pf1469689175163249" source="pf1469689175164333" outcome="loginPage"/>
+  <links id="pf1469689175164336" target="pf1469689175166363" source="pf1469689175164333" outcome="coordinatorPage"/>
+  <links id="pf1469689175164337" target="pf1469689175167400" source="pf1469689175164333" outcome="workshopDetailsPage"/>
+  <links id="pf1469689175164284" target="pf1469689175164268" source="pf1469689175164320" outcome="homePage"/>
+  <links id="pf1469689175164301" target="pf1469689175164287" source="pf1469689175164320" outcome="festPage"/>
+  <links id="pf1469689175164317" target="pf1469689175164304" source="pf1469689175164320" outcome="conferencePage"/>
+  <links id="pf1469689175164321" target="pf1469689175164320" source="pf1469689175164320" outcome="guestLecturePage"/>
+  <links id="pf1469689175164322" target="pf1469689175164333" source="pf1469689175164320" outcome="workshopPage"/>
+  <links id="pf1469689175164323" target="pf1469689175167399" source="pf1469689175164320" outcome="eventDetails"/>
+  <links id="pf1469689175163265" target="pf1469689175163249" source="pf1469689175164320" outcome="loginPage"/>
+  <links id="pf1469689175164324" target="pf1469689175166363" source="pf1469689175164320" outcome="coordinatorPage"/>
+  <links id="pf1469689175164285" target="pf1469689175164268" source="pf1469689175166357" outcome="homePage"/>
+  <links id="pf1469689175164302" target="pf1469689175164287" source="pf1469689175166357" outcome="festPage"/>
+  <links id="pf1469689175164318" target="pf1469689175164304" source="pf1469689175166357" outcome="conferencePage"/>
+  <links id="pf1469689175164343" target="pf1469689175164333" source="pf1469689175166357" outcome="workshopPage"/>
+  <links id="pf1469689175166358" target="pf1469689175166357" source="pf1469689175166357" outcome="festDetails"/>
+  <links id="pf1469689175166359" target="pf1469689175166362" source="pf1469689175166357" outcome="eventsOfFest"/>
+  <links id="pf1469689175163266" target="pf1469689175163249" source="pf1469689175166357" outcome="loginPage"/>
+  <links id="pf1469689175166360" target="pf1469689175166363" source="pf1469689175166357" outcome="coordinatorPage"/>
+  <links id="pf1469689175164267" target="pf1469689175163249" source="pf1469689175167401" outcome="loginPage"/>
+  <links id="pf1469689175164303" target="pf1469689175164287" source="pf1469689175167401" outcome="festPage"/>
+  <links id="pf1469689175164286" target="pf1469689175164268" source="pf1469689175167401" outcome="homePage"/>
+  <links id="pf1469689175164319" target="pf1469689175164304" source="pf1469689175167401" outcome="conferencePage"/>
+  <links id="pf1469689175164344" target="pf1469689175164333" source="pf1469689175167401" outcome="workshopPage"/>
+  <links id="pf1469689175166361" target="pf1469689175166357" source="pf1469689175167401" outcome="festDetails"/>
+  <links id="pf1469689175166369" target="pf1469689175166363" source="pf1469689175167401" outcome="coordinatorPage"/>
+  <links id="pf1469689746819403" target="pf1469689746819405" source="pf1469689175164348" outcome="guestLectureHome"/>
+  <links id="pf1469689746818402" target="pf1469689746819405" source="pf1469689175164304" outcome="guestLectureHome"/>
+  <links id="pf1469689746819404" target="pf1469689746819405" source="pf1469689175166363" outcome="guestLectureHome"/>
+  <links id="pf1469690097257406" target="pf1469689746819405" source="pf1469689175163211" outcome="guestLectureHome"/>
+  <links id="pf1469690097257409" target="pf1469689746819405" source="pf1469689175167390" outcome="guestLectureHome"/>
+  <links id="pf1469690097257408" target="pf1469689746819405" source="pf1469689175167382" outcome="guestLectureHome"/>
+  <links id="pf1469690690944416" target="pf1469690690944417" source="pf1469689175164268" outcome="guestLecturesHome"/>
+  <links id="pf1469690707161418" target="pf1469690690944417" source="pf1469689175167397" outcome="guestLectureshome"/>
+  <links id="pf1469690717787419" target="pf1469690690944417" source="pf1469689175164287" outcome="guestLecturesHome"/>
+  <links id="pf1469690726594420" target="pf1469690690944417" source="pf1469689175164333" outcome="guestLecturesHome"/>
+  <links id="pf1469690758255422" target="pf1469690690944417" source="pf1469689175166357" outcome="guestLecturesHome"/>
+  <links id="pf1469690773893423" target="pf1469690690944417" source="pf1469689175167401" outcome="guestLecturesHome"/>
+  <links id="pf1469691508596424" target="pf1469689175164320" source="pf1469690690944417" outcome="guestLecturePage"/>
+  <links id="pf14697020763370" target="pf1469689175166363" source="pf1469689175164345" outcome="coordinatorPage"/>
+  <links id="pf14697020974841" target="pf1469689746819405" source="pf1469689175163240" outcome="guestLectureHome"/>
+  <links id="pf14697021390622" target="pf1469689175166363" source="pf1469689175163236" outcome="coordinatorPage"/>
+  <links id="pf14697021731113" target="pf1469689175164268" source="pf1469689175163227" outcome="homePage"/>
+  <links id="pf14697021731114" target="pf1469689175164287" source="pf1469689175163227" outcome="festPage"/>
+  <links id="pf14697021731115" target="pf1469689175164304" source="pf1469689175163227" outcome="conferencePage"/>
+  <links id="pf14697021731116" target="pf1469690690944417" source="pf1469689175163227" outcome="guestLecturesHome"/>
+  <links id="pf14697021731117" target="pf1469689175164333" source="pf1469689175163227" outcome="workshopPage"/>
+  <links id="pf14697021731118" target="pf1469689175167397" source="pf1469689175163227" outcome="adminPage"/>
+  <links id="pf14697021731119" target="pf1469689175163249" source="pf1469689175163227" outcome="loginPage"/>
+  <links id="pf146970220511310" target="pf1469689175166363" source="pf1469689175163224" outcome="coordinatorPage"/>
+  <links id="pf146970222830511" target="pf1469689175164268" source="pf1469689175163204" outcome="homePage"/>
+  <links id="pf146970222830512" target="pf1469689175164287" source="pf1469689175163204" outcome="festPage"/>
+  <links id="pf146970222830513" target="pf1469689175164304" source="pf1469689175163204" outcome="conferencePage"/>
+  <links id="pf146970222830514" target="pf1469690690944417" source="pf1469689175163204" outcome="guestLecturesHome"/>
+  <links id="pf146970222830515" target="pf1469689175164333" source="pf1469689175163204" outcome="workshopPage"/>
+  <links id="pf146970222830516" target="pf1469689175167397" source="pf1469689175163204" outcome="adminPage"/>
+  <links id="pf146970222830517" target="pf1469689175163249" source="pf1469689175163204" outcome="loginPage"/>
+  <links id="pf146970225815418" target="pf1469689175166363" source="pf1469689175163201" outcome="coordinatorPage"/>
+  <links id="pf146970226861020" target="pf1469689175164268" source="pf1469690690944417" outcome="homePage"/>
+  <links id="pf146970226861121" target="pf1469689175164287" source="pf1469690690944417" outcome="festPage"/>
+  <links id="pf146970226861122" target="pf1469689175164304" source="pf1469690690944417" outcome="conferencePage"/>
+  <links id="pf146970226861126" target="pf1469690690944417" source="pf1469690690944417" outcome="guestLecturesHome"/>
+  <links id="pf146970226861123" target="pf1469689175164333" source="pf1469690690944417" outcome="workshopPage"/>
+  <links id="pf146970226861125" target="pf1469689175167397" source="pf1469690690944417" outcome="adminPage"/>
+  <links id="pf146970226861019" target="pf1469689175163249" source="pf1469690690944417" outcome="loginPage"/>
+  <links id="pf146970226861124" target="pf1469689175166363" source="pf1469690690944417" outcome="coordinatorPage"/>
 </pageflow:Pageflow>

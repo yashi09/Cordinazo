@@ -37,17 +37,41 @@
 			<h:form>
 				<h:dataTable styleClass="table table-striped"
 					value="#{adminEventsOfFestPage.festEvents}" var="event">
-					<h:column><h:outputText value="#{event.eventName}"></h:outputText>
+					<h:column>
+					<f:facet name="header">
+								<h:outputText value="Name"></h:outputText>
+							</f:facet>
+					<h:outputText value="#{event.eventName}"></h:outputText>
 					</h:column>
-					<h:column><h:outputText value="#{event.eventDescription}"></h:outputText>
+					<h:column>
+					<f:facet name="header">
+								<h:outputText value="Description"></h:outputText>
+							</f:facet>
+					<h:outputText value="#{event.eventDescription}"></h:outputText>
 					</h:column>
-					<h:column><h:outputText value="#{event.venue}"></h:outputText>
+					<h:column>
+					<f:facet name="header">
+								<h:outputText value="Venue"></h:outputText>
+							</f:facet>
+					<h:outputText value="#{event.venue}"></h:outputText>
 					</h:column>
-					<h:column><h:outputText value="#{event.firstPrize}"></h:outputText>
+					<h:column>
+					<f:facet name="header">
+								<h:outputText value="1st prize"></h:outputText>
+							</f:facet>
+					<h:outputText value="#{event.firstPrize}"></h:outputText>
 					</h:column>
-					<h:column><h:outputText value="#{event.secondPrize}"></h:outputText>
+					<h:column>
+					<f:facet name="header">
+								<h:outputText value="2nd prize"></h:outputText>
+							</f:facet>
+					<h:outputText value="#{event.secondPrize}"></h:outputText>
 					</h:column>
-					<h:column><h:outputText value="#{event.thirdPrize}"></h:outputText>
+					<h:column>
+					<f:facet name="header">
+								<h:outputText value="3rd prize"></h:outputText>
+							</f:facet>
+					<h:outputText value="#{event.thirdPrize}"></h:outputText>
 					</h:column>
 					<h:column><h:commandLink value="Coordinators" action="#{adminEventsOfFestPage.navNext}">
 						<f:setPropertyActionListener value="viewEventCoordinators" target="#{adminEventsOfFestPage.work}"/>

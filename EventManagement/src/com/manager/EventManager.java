@@ -43,4 +43,6 @@ public interface EventManager {
 	public void deleteAllGuestLectures();
 	public void deleteAllParties();
 	public void deleteAllEvents();
+	public void deleteAllParticipantsOfEvent(int eventId);
+	public void deleteAllVolunteersOfEvent(int eventId);
 }

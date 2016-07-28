@@ -40,6 +40,9 @@ public class CoordinatorPage extends BasePage{
 	public Map<String, Object> postProcess() {
 		Map<String,Object> map = new HashMap<String, Object>();
 		map.put("eventId", eventId);
+		map.put("conferenceId", eventId);
+		map.put("guestLectureId", eventId);
+		map.put("workshopId", eventId);
 		return map;
 	}
 

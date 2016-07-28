@@ -45,7 +45,7 @@
 							</h:commandLink></li>
 						<li style="width: inherit;"><h:commandLink
 								action="#{homePage.navNext}">Guest Lecture
-								<f:setPropertyActionListener value="guestLecturePage"
+								<f:setPropertyActionListener value="guestLecturesHome"
 									target="#{homePage.action}" />
 							</h:commandLink></li>
 						<li style="width: inherit;"><h:commandLink

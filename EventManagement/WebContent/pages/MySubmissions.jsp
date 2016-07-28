@@ -27,35 +27,31 @@
 			<h:form>
 				<h:dataTable styleClass="table table-striped"
 					value="#{mySubmissions.papers}" var="paper">
+					<%-- <c:set value="${mySubmissions.papers}" var="p"></c:set> --%>
 					<h:column>
 						<h:outputText value="#{paper.title}"></h:outputText>
 					</h:column>
 					<h:column>
 						<h:outputText value="#{paper.abstractOfPaper}"></h:outputText>
 					</h:column>
-					<c:if test="${paper.paperStatus eq 0}">
 						<h:column>
-							<h:outputText value="Not submitted"></h:outputText>
+							<h:outputText value="Not submitted" rendered="#{paper.paperStatus eq 0}"></h:outputText>
+							<h:outputText value="Submitted" rendered="#{paper.paperStatus eq 1}"></h:outputText>
+							<h:outputText value="Accepted" rendered="#{paper.paperStatus eq 2}"></h:outputText>
+							<h:outputText value="Registered" rendered="#{paper.paperStatus eq 3}"></h:outputText>
 						</h:column>
-						<h:column>
+					<%-- 	<h:column>
 							<t:inputFileUpload ></t:inputFileUpload>
 						</h:column>
-					</c:if>
-					<c:if test="${paper.paperStatus eq 1}">
 						<h:column>
 							<h:outputText value="Submitted"></h:outputText>
 						</h:column>
-					</c:if>
-					<c:if test="${paper.paperStatus eq 2}">
 						<h:column>
 							<h:outputText value="Accepted"></h:outputText>
 						</h:column>
-					</c:if>
-					<c:if test="${paper.paperStatus eq 3}">
 						<h:column>
 							<h:outputText value="Registered"></h:outputText>
-						</h:column>
-					</c:if>
+						</h:column> --%>
 				</h:dataTable>
 			</h:form>
 		</div>

@@ -23,53 +23,129 @@
 		<jsp:include page="Header.jsp"></jsp:include>
 		<div class="col-sm-9 col-md-10 main">
 			<h2 class="sub-header">My Events</h2>
-		
+
 			<div class="table-responsive">
 				<h:form>
-					<h:dataTable value="#{coordinatorPage.events}" var="event" styleClass="table table-striped">
+					<h:dataTable value="#{coordinatorPage.events}" var="event"
+						styleClass="table table-striped">
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Name"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{event.eventName}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Description"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{event.eventDescription}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="1st prize"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{event.firstPrize}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="2nd prize"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{event.secondPrize}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="3rd prize"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{event.thirdPrize}"></h:outputText>
 						</h:column>
 						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Venue"></h:outputText>
+							</f:facet>
 							<h:outputText value="#{event.venue}"></h:outputText>
 						</h:column>
-						<h:column>
-							<h:commandLink value="Edit event" action="#{coordinatorPage.navNext}">
-								<f:setPropertyActionListener value="#{event.eventId}" target="#{coordinatorPage.eventId}"/>
-								<f:setPropertyActionListener value="editEventPage" target="#{coordinatorPage.action}"/>
-							</h:commandLink>
-						</h:column>
+						<c:choose>
+							<c:when
+								test="${event.class.name == 'ConferenceDetailsDto'}">
+								<h:column>
+									<h:commandLink value="Edit conference"
+										action="#{coordinatorPage.navNext}">
+										<f:setPropertyActionListener value="#{event.eventId}"
+											target="#{coordinatorPage.eventId}" />
+										<f:setPropertyActionListener value="editConferencePage"
+											target="#{coordinatorPage.action}" />
+									</h:commandLink>
+								</h:column>
+							</c:when>
+							<c:otherwise>
+							<c:choose>
+								<c:when
+									test="${event.class.name == 'WorkshopDetailsDto'}">
+									<h:column>
+										<h:commandLink value="Edit workshop"
+											action="#{coordinatorPage.navNext}">
+											<f:setPropertyActionListener value="#{event.eventId}"
+												target="#{coordinatorPage.eventId}" />
+											<f:setPropertyActionListener value="editWorkshopPage"
+												target="#{coordinatorPage.action}" />
+										</h:commandLink>
+									</h:column>
+								</c:when>
+								<c:otherwise>
+								<c:choose>
+									<c:when
+										test="${event.class.name == 'GuestLectureDetailsDto'}">
+										<h:column>
+											<h:commandLink value="Edit guest lecture"
+												action="#{coordinatorPage.navNext}">
+												<f:setPropertyActionListener value="#{event.eventId}"
+													target="#{coordinatorPage.eventId}" />
+												<f:setPropertyActionListener value="editGuestLecture"
+													target="#{coordinatorPage.action}" />
+											</h:commandLink>
+										</h:column>
+									</c:when>
+									<c:otherwise>
+										<h:column>
+											<h:commandLink value="Edit event"
+												action="#{coordinatorPage.navNext}">
+												<f:setPropertyActionListener value="#{event.eventId}"
+													target="#{coordinatorPage.eventId}" />
+												<f:setPropertyActionListener value="editEventPage"
+													target="#{coordinatorPage.action}" />
+											</h:commandLink>
+										</h:column>
+									</c:otherwise>
+									</c:choose>
+								</c:otherwise>
+								</c:choose>
+							</c:otherwise>
+						</c:choose>
 						<h:column>
 							<h:commandLink value="Coordinators"
 								action="#{coordinatorPage.navNext}">
-								<f:setPropertyActionListener value="#{event.eventId}" target="#{coordinatorPage.eventId}" />
-								<f:setPropertyActionListener value="viewCoordsOfEvent" target="#{coordinatorPage.action}"/>
+								<f:setPropertyActionListener value="#{event.eventId}"
+									target="#{coordinatorPage.eventId}" />
+								<f:setPropertyActionListener value="viewCoordsOfEvent"
+									target="#{coordinatorPage.action}" />
 							</h:commandLink>
 						</h:column>
 						<h:column>
 							<h:commandLink value="Volunteers"
 								action="#{coordinatorPage.navNext}">
-								<f:setPropertyActionListener value="#{event.eventId}" target="#{coordinatorPage.eventId}" />
-								<f:setPropertyActionListener value="volunteersOfEvent" target="#{coordinatorPage.action}"/>
+								<f:setPropertyActionListener value="#{event.eventId}"
+									target="#{coordinatorPage.eventId}" />
+								<f:setPropertyActionListener value="volunteersOfEvent"
+									target="#{coordinatorPage.action}" />
 							</h:commandLink>
 						</h:column>
 						<h:column>
 							<h:commandLink value="Participants"
 								action="#{coordinatorPage.navNext}">
-								<f:setPropertyActionListener value="#{event.eventId}" target="#{coordinatorPage.eventId}" />
-								<f:setPropertyActionListener value="participantsOfEvent" target="#{coordinatorPage.action}"/>
+								<f:setPropertyActionListener value="#{event.eventId}"
+									target="#{coordinatorPage.eventId}" />
+								<f:setPropertyActionListener value="participantsOfEvent"
+									target="#{coordinatorPage.action}" />
 							</h:commandLink>
 						</h:column>
 					</h:dataTable>
